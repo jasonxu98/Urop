@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Page Title</title>
+<style>
+#p01 {
+	font-size:25px;
+    border: 1px solid ;
+    padding: 30px;
+}
+
+#p02 {
+	font-size:25px;
+    border: 1px solid ;
+    padding: 30px;
+}
+
+form {
+    font-size:25px;
+    border: 1px solid ;
+    padding: 30px;
+}
+
+
+</style>
+</head>
+<body style="background-color:rgba(255, 225, 0, 0.5)">
+
+<h1 style="font-size:50px;text-align:center;">
+perfSONAR supplementary tool</h1>
+
+
+
+<p id="p01">To use this toolkit, please select your source site, destination site and time period from the drop box below.<br>Please kindly note that latest data <b>might not</b> be up to date.</p>
+
+<form action="/action_page.php">
+	<table style="width:100%">
+  <tr>
+    <th>Source</th>
+    <th>Destination</th> 
+    <th>Start time</th>
+    <th>End time</th>
+  </tr>
+  <tr>
+    <td>
+    <select name="Src">
+    <option value="A">SiteA</option>
+  </select>
+  </td>
+    <td>
+    <select name="Des">
+    <option value="A">SiteA</option>
+    </td> 
+    <td>
+    
+     <input name="srctime" type="datetime-local" 
+     min="2018-01-01T01:00"
+     
+    >
+    </td>
+    <th>
+    <input name="destime" type="datetime-local"            min="2018-01-01T01:00">
+    </th>
+  </tr>
+  
+  
+</table>
+
+
+
+
+
+  
+  <br><br>
+  <input type="submit">
+</form>
+
+
+<p id="p02"> 
+</p>
+
+
+</body>
+</html>
