@@ -1,9 +1,15 @@
+<!DOCTYPE HTML> 
 <html>
+<head>
+<style>
 
-
+</style>
+</head>
 
 <body>
 <?php
+
+$src = $des = $start_time = $end_time = “”;
 if ( isset( $_POST[‘src’] ) ) {
 $src = $_POST[‘src’];
 $des = $_POST[‘des’];
