@@ -1,5 +1,5 @@
 <?php
-echo $_POST[‘src’]
+echo htmlspecialchars($_POST[‘src’]);
 ?>
 
 <!DOCTYPE HTML> 
