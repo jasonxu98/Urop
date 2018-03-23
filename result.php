@@ -1,3 +1,7 @@
+<?php
+echo $_POST[‘src’]
+?>
+
 <!DOCTYPE HTML> 
 <html>
 <head>
@@ -10,7 +14,7 @@
 <?php
 
 $src = $des = $start_time = $end_time = “”;
-if ( isset( $_POST[‘src’] ) ) {
+if (isset( $_POST[‘src’] )) {
 $src = $_POST[‘src’];
 $des = $_POST[‘des’];
 echo $src; 
