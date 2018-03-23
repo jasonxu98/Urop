@@ -4,23 +4,22 @@
 <title>Page Title</title>
 <style>
 #p01 {
-	font-size:25px;
-    border: 1px solid ;
-    padding: 30px;
+font-size:25px;
+border: 1px solid ;
+padding: 30px;
 }
 
 #p02 {
-	font-size:25px;
-    border: 1px solid ;
-    padding: 30px;
+font-size:25px;
+border: 1px solid ;
+padding: 30px;
 }
 
 form {
-    font-size:25px;
-    border: 1px solid ;
-    padding: 30px;
+font-size:25px;
+border: 1px solid ;
+padding: 30px;
 }
-
 
 </style>
 </head>
@@ -29,69 +28,47 @@ form {
 <h1 style="font-size:50px;text-align:center;">
 perfSONAR supplementary tool</h1>
 
-
-
 <p id="p01">To use this toolkit, please select your source site, destination site and time period from the drop box below.<br>Please kindly note that latest data <b>might not</b> be up to date.</p>
 
 <form action=result.php method=“post”>
-	<table style="width:100%">
-  	<tr>
-    <th>Source</th>
-    <th>Destination</th> 
-    <th>Start time</th>
-    <th>End time</th>
- 	</tr>
-  	<tr>
-    <td>
-    	<input list="browsers" name="src">
-   		<datalist id="browsers">
-    	<option value="Jason">
-    	<option value="Zerses">
-   		</datalist>
-    
-  	</td>
-    <td>
-    	<input list="browsers" name="des">
-   		<datalist id="browsers">
-    	<option value="Jason">
-    	<option value="Zerses">
-   		</datalist>
-    </td> 
-    <td>
-    
-     	<input name=“start_time" type="datetime-local" 
+<table style="width:100%">
+<tr>
+<th>Source</th>
+<th>Destination</th> 
+<th>Start time</th>
+<th>End time</th>
+</tr>
+<tr>
+<td>
+<input list="browsers" name="src">
+<datalist id="browsers">
+<option value="Jason">
+<option value="Zerses">
+</datalist>
+</td>
+<td>
+<input list="browsers" name="des">
+<datalist id="browsers">
+<option value="Jason">
+<option value="Zerses">
+</datalist>
+</td> 
+<td>
+<input name=“start_time" type="datetime-local" 
      min="2018-01-01T01:00">
-     
-    </td>
-    <th>
-    <input name=“end_time" type="datetime-local" min="2018-01-01T01:00">
-    </th>
-	</tr>
-  
-  
+</td>
+<th>
+<input name=“end_time" type="datetime-local" min="2018-01-01T01:00">
+</th>
+</tr>
 </table>
-
-
-
-
-
   
   <br><br>
   <input type="submit" value="Query">
   <input type="reset">
 </form>
 
-<p id="p02"> 
-<output id="result"></output>
-</p>
 
-
-<script>
-function query() {
-    document.getElementById("result").innerHTML = "Hello JavaScript!";
-}
-
-</script>
 
 
 
