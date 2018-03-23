@@ -17,6 +17,9 @@ Destination: <?php echo $_POST[‘des’]; ?><br>
 Start time: <?php echo $_POST[‘start_time’]; ?><br>
 End time: <?php echo $_POST[‘end_time’]; ?><br>
 
+End time: <?php echo ‘a’; ?><br>
+
+
 
 
 
