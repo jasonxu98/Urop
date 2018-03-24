@@ -24,11 +24,6 @@ $des = $_POST["des"];
 $start_time = $_POST["start_time"]; 
 $end_time = $_POST["end_time"]; 
 
-echo $src;
-echo $des;
-
-
-echo "Hello";
 ?>
 
 
@@ -40,14 +35,14 @@ $port        = "port = 5432";
 $dbname      = "dbname = jasonxu";
 $credentials = "user = jasonxu password=xzk3136";
 
-$db = pg_connect( "$host $port $dbname $credentials"  );
+$db = pg_connect( "$host $port $dbname $credentials" );
 if(!$db) {
     echo "Error : Unable to open database\n";
 } else {
       echo "Opened database successfully\n";
 }
 
-?>
+?> 
 
 </body>
 </html>
