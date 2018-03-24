@@ -28,8 +28,8 @@ $end_time = $_POST["end_time"];
 
 
 <?php
-
-
+error_reporting(E_ALL);
+echo "Hello";
 $host        = "host = localhost";
 $port        = "port = 5432";
 $dbname      = "dbname = jasonxu";
