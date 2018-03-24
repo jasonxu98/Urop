@@ -28,14 +28,14 @@ $end_time = $_POST["end_time"];
 
 
 <?php
-error_reporting(E_ALL);
+
 echo "Hello";
 $host        = "host = localhost";
 $port        = "port = 5432";
 $dbname      = "dbname = jasonxu";
 $credentials = "user = jasonxu password=xzk3136";
 
-$db = pg_connect( "$host $port $dbname $credentials" );
+$db = pg_connect( "dbname = jasonxu" );
 if(!$db) {
     echo "Error : Unable to open database\n";
 } else {
