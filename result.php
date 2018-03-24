@@ -12,9 +12,8 @@
 <?php
 <h1> Your input </h1>
 $src = $des = $start_time = $end_time = "";
-$src=$_POST["src"]
-echo "Source: “;<br>
-echo $src;<br>
+$src=$_POST["src”];
+echo "Source: “;echo $src;
 ?>
 Destination: <?php echo $_POST["des"]; ?><br>
 Start time: <?php echo htmlspecialchars($_POST["start_time"]); ?><br>
