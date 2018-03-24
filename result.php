@@ -34,7 +34,7 @@ if(!$db) {
 } else {
       echo "Opened database successfully\n";
 }
-
+echo "Hello";
 ?>
 
 
