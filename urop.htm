@@ -33,7 +33,7 @@ perfSONAR supplementary tool</h1>
 
 <p id="p01">To use this toolkit, please select your source site, destination site and time period from the drop box below.<br>Please kindly note that latest data <b>might not</b> be up to date.</p>
 
-<form action=result.php method="post">
+<form action=result.php method="get">
 	<table style="width:100%">
   	<tr>
     <th>Source</th>
@@ -81,17 +81,9 @@ perfSONAR supplementary tool</h1>
   <input type="reset">
 </form>
 
-<p id="p02"> 
-<output id="result"></output>
-</p>
 
 
-<script>
-function query() {
-    document.getElementById("result").innerHTML = "Hello JavaScript!";
-}
 
-</script>
 
 
 
