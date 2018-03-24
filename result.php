@@ -16,7 +16,13 @@ Start time: <?php echo $_POST["start_time"]; ?><br>
 End time: <?php echo $_POST["end_time"]; ?><br><br>
 
 
-
+<?php 
+$src = $_POST["src"];
+$des = $_POST["des"];
+$start_time = $_POST["start_time"];
+$end_time = $_POST["end_time"];
+echo $src;
+?>
 
 
 
