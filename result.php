@@ -17,11 +17,13 @@ End time: <?php echo $_POST["end_time"]; ?><br><br>
 
 <h2> The output</h2><br>
 
+Source: <?php echo $_POST["src"]; ?><br>
+
 <?php 
 $src = $_POST["src"];
 $des = $_POST["des"];
-$start_time = $_POST["start_time"];
-$end_time = $_POST["end_time"];
+$start_time = $_POST["start_time"]; 
+$end_time = $_POST["end_time"]; 
 
 $host        = "host = localhost";
 $port        = "port = 5432";
