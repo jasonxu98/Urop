@@ -19,19 +19,13 @@ End time: <?php echo $_POST["end_time"]; ?><br><br>
 
 
 <?php 
+$src = $_POST["src"];
+$des = $_POST["des"];
+$start_time = $_POST["start_time"]; 
+$end_time = $_POST["end_time"]; 
 
-
-$host        = "host = localhost";
-$port        = "port = 5432";
-$dbname      = "dbname = jasonxu";
-$credentials = "user = jasonxu password=xzk3136";
-
-$db = pg_connect( "$host $port $dbname $credentials"  );
-if(!$db) {
-    echo "Error : Unable to open database\n";
-} else {
-      echo "Opened database successfully\n";
-}
+echo $src;
+echo $post
 echo "Hello";
 ?>
 
