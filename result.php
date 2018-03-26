@@ -29,17 +29,31 @@ $end_time = $_POST["end_time"];
 
 <?php
 
-echo "Hello";
-$host        = "host = localhost";
-$port        = "port = 5432";
-$dbname      = "dbname = jasonxu";
-$credentials = "user = jasonxu password=xzk3136";
+echo "Hello<br>";
+$host        = "t3pers13.physics.lsa.umich.edu";
+#$host        = "localhost";
+$port        = "5432";
+$dbname      = "jasonxu";
+$user = "jasonxu"; 
+$password = "xzk3136";
 
-$db = pg_connect( "dbname = jasonxu" );
-if(!$db) {
-    echo "Error : Unable to open database\n";
-} else {
-      echo "Opened database successfully\n";
+try {
+  $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+  if ($dbh) {
+	echo "Connected to DB $dbname<br>";
+  }
+} catch ( PDOException $e) {
+	echo "Error connecting to DB:".$e->getMessage();
+}
+
+# Create query of table 
+try {
+  $stmt = $dbh->query($sql_query);
+  if ($stmt === false){
+	die("Error executing the query: $sql_query");
+  }
+} catch (PDOExeption $e) {
+  echo $e->getMessage();
 }
 
 ?> 
