@@ -12,8 +12,8 @@
 <h1> Your input </h1>
 Source: <?php echo $_POST["src"]; ?><br>
 Destination: <?php echo $_POST["des"]; ?><br>
-Start time: <?php echo $_POST["start_time"]; ?><br>
-End time: <?php echo $_POST["end_time"]; ?><br><br>
+Start time: <?php echo $_POST["start_time"]; ?>(epoch:<?php echo strtotime($_POST["start_time"]); ?>)<br>
+End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["end_time"]); ?>)<br><br>
 
 <?php
     echo strtotime($_POST["start_time"]);
@@ -27,6 +27,8 @@ $src = $_POST["src"];
 $des = $_POST["des"];
 $start_time = $_POST["start_time"]; 
 $end_time = $_POST["end_time"];
+$epoch_start = strtotime($start_time);
+$epoch_end = strtotime($end_time);
 ?>
 
 
