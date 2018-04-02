@@ -23,7 +23,7 @@ $src = $_POST["src"];
 $des = $_POST["des"];
 $start_time = $_POST["start_time"]; 
 $end_time = $_POST["end_time"]; 
-
+    echo $start_time;
 ?>
 
 
