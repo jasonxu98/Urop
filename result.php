@@ -15,9 +15,6 @@ Destination: <?php echo $_POST["des"]; ?><br>
 Start time: <?php echo $_POST["start_time"]; ?>(epoch:<?php echo strtotime($_POST["start_time"]); ?>)<br>
 End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["end_time"]); ?>)<br><br>
 
-<?php
-    echo strtotime($_POST["start_time"]);
-?>
 
 <h2> The output</h2><br>
 
