@@ -16,10 +16,7 @@ Start time: <?php echo $_POST["start_time"]; ?><br>
 End time: <?php echo $_POST["end_time"]; ?><br><br>
 
 <?php
-if ((strtotime($_POST["start_time"])) === false) {
-    echo 'failed';
-}
-    
+    echo strtotime($_POST["start_time"]);
 ?>
 
 <h2> The output</h2><br>
