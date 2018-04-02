@@ -15,6 +15,13 @@ Destination: <?php echo $_POST["des"]; ?><br>
 Start time: <?php echo $_POST["start_time"]; ?><br>
 End time: <?php echo $_POST["end_time"]; ?><br><br>
 
+<?php
+if ((strtotime($_POST["start_time"])) === false) {
+    echo 'failed';
+}
+    
+?>
+
 <h2> The output</h2><br>
 
 
@@ -22,8 +29,7 @@ End time: <?php echo $_POST["end_time"]; ?><br><br>
 $src = $_POST["src"];
 $des = $_POST["des"];
 $start_time = $_POST["start_time"]; 
-$end_time = $_POST["end_time"]; 
-    echo $start_time;
+$end_time = $_POST["end_time"];
 ?>
 
 
