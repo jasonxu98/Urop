@@ -15,6 +15,7 @@
     $end_time = $_POST["end_time"];
     $epoch_start = strtotime($start_time);
     $epoch_end = strtotime($end_time);
+    if ($src == 'perfsonar01.hep.wisc.edu') { $src = 'hello';}
     ?>
 
 <h1> Your input </h1>
