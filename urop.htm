@@ -73,13 +73,15 @@ perfSONAR Analytics Summarization Tool</h1>
     <td>
         
         
-    	<input list="suggestionList" name="src" id="answerInput-hidden">
-            
-            
-   		<datalist id="suggestionList">
-            <option data-value="42" value="The answer">
-        </datalist>
-        <input type="hidden" name="answer" id="answerInput-hidden">
+        <input id="selected" list="browsers" name="browser">
+            <datalist id="browsers">
+                <option data-value="InternetExplorer" value="1"></option>
+                <option data-value="Firefox" value="2"></option>
+                <option data-value="Chrome" value="3"></option>
+                <option data-value="Opera" value="4"></option>
+                <option data-value="Safari" value="5"></option>
+            </datalist>
+            <input id="submit" type="submit">
     
   	</td>
     <td>
@@ -128,6 +130,23 @@ perfSONAR Analytics Summarization Tool</h1>
 function updateClock() {
 document.getElementById("demo").innerHTML = Date();
 }
+
+$(document).ready(function() {
+                  
+                  var data = {};
+                  $("#browsers option").each(function(i,el) {
+                                             data[$(el).data("value")] = $(el).val();
+                                             });
+                  // `data` : object of `data-value` : `value`
+                  console.log(data, $("#browsers option").val());
+                  
+                  
+                  $('#submit').click(function()
+                                     {
+                                     var value = $('#selected').val();
+                                     alert($('#browsers [value="' + value + '"]').data('value'));
+                                     });
+                  });
 </script>
 
 
