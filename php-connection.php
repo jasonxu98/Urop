@@ -27,10 +27,6 @@ try {
   $list = $dbh->query($sql_query);
       $test = pg_query($dbh, "SELECT * FROM ServerLookupbackup");
       
-      //    try to print all rows
-      $arr = pg_fetch_all($test);
-      print_r($arr);
-
   if ($list === false){
 	die("Error executing the query: $sql_query");
   }
@@ -38,7 +34,8 @@ try {
   echo $e->getMessage();
 }
     
-    while($row_list=pg_fetch_result($list, 1,0)){
+    while($row = $list->fetch(PDO::FETCH_ASSOC)){
+        echo htmlspecialchars($list['domain']);
         echo "WEIRD<br>";
     }
     echo "WEIRD<br>";
