@@ -100,6 +100,7 @@ perfSONAR Analytics Summarization Tool</h1>
     endwhile;
     ?>
 
+<?php
 while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
 ?>
 
