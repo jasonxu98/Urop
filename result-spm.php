@@ -27,8 +27,8 @@ try {
 } catch (PDOExeption $e) {
   echo $e->getMessage();
 }
-    
-    print_r($stmt);
+    $arr = pg_fetch_all($stmt);
+    print_r($arr);
 
 ?> 
 
