@@ -20,7 +20,8 @@ try {
 }
 
 # Create query of table 
-  $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL";try {
+  $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL";
+  try {
   $list = $dbh->query($sql_query);
   if ($list === false){
 	die("Error executing the query: $sql_query");
@@ -30,7 +31,7 @@ try {
 }
 
     while($row_list=pg_fetch_result($list)){
-        echo $row_list["domain"];
+        echo $row_list;
     }
 ?> 
 
