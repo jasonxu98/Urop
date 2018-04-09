@@ -29,37 +29,8 @@ try {
   echo $e->getMessage();
 }
 
+    while($row_list=pg_fetch_assoc($list)){
+        echo $row_list["domain"];
+    }
 ?> 
 
-<!DOCTYPE HTML> 
-<html>
-<head>
-<title>Departments</title>
-<link href="style.php" rel="stylesheet" media="screen">
-</head>
-<body>
- <h1>Weather</h1>
- <table class="table table-striped table-bordered" style="width:600px;">
- <thead>
- <tr>
- <th>City</th>
- <th>Temp(low)</th>
- <th>Temp(hi)</th>
- <th>Precipitation</th>
- <th>Date</th>
- </tr>
- </thead>
- <tbody>
- <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
- <tr>
- <td><?php echo htmlspecialchars($row['domain']); ?></td>
- <td><?php echo htmlspecialchars($row['temp_lo']); ?></td>
- <td><?php echo htmlspecialchars($row['temp_hi']); ?></td>
- <td><?php echo htmlspecialchars($row['prcp']); ?></td>
- <td><?php echo htmlspecialchars($row['date']); ?></td>
- </tr>
- <?php endwhile; ?>
- </tbody>
- </table>
-</body>
-</html>
