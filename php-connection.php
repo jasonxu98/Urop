@@ -20,7 +20,7 @@ try {
 }
 
 # Create query of table 
-  $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 S NOT NULL";
+  $sql_query="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
   try {
   $list = $dbh->query($sql_query);
   if ($list === false){
