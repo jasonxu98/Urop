@@ -19,7 +19,7 @@ try {
 }
 
 # Create query of table 
-    # $sql_query="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
+    #$sql_query="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
     #$sql_query="select ipv4 from serverlookupbackup";
     $sql_query="select * from serverlookupbackup";
 
@@ -27,8 +27,8 @@ try {
   $list = $dbh->query($sql_query);
       $test = pg_query($dbh, "SELECT * FROM ServerLookupbackup");
       
+      //    try to print all rows
       $arr = pg_fetch_all($test);
-      
       print_r($arr);
 
   if ($list === false){
@@ -38,7 +38,6 @@ try {
   echo $e->getMessage();
 }
     
-
     while($row_list=pg_fetch_result($list, 1,0)){
         echo "WEIRD<br>";
     }

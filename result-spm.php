@@ -4,7 +4,7 @@ echo "Hello<br>";
 $host        = "t3pers13.physics.lsa.umich.edu";
 #$host        = "localhost";
 $port        = "5432";
-$dbname      = "hello";
+$dbname      = "jasonxu";
 $user = "jasonxu"; 
 $password = "xzk3136";
 
