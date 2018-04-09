@@ -32,7 +32,7 @@ try {
   echo $e->getMessage();
 }
 
-    while($row_list=pg_fetch_assoc($list)){
+    while($row_list=pg_fetch_result($list, 1,0)){
         echo "WEIRD<br>";
     }
     echo "WEIRD<br>";
