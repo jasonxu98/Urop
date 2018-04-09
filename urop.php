@@ -73,7 +73,6 @@ perfSONAR Analytics Summarization Tool</h1>
     <td>
     	<input list="browsers" name="src">
    		<datalist id="browsers">
-            <option value="perfsonar01.hep.wisc.edu">144.92.180.75</option>
 
 <?php
     $host        = "t3pers13.physics.lsa.umich.edu";
@@ -83,8 +82,10 @@ perfSONAR Analytics Summarization Tool</h1>
     $user = "jasonxu";
     $password = "xzk3136";
     $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-    $sql_query="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
-    $list = $dbh->query($sql_query) or die('error');
+    $sql_query_one="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
+    $sql_query_two="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 IS NOT NULL";
+    $list = $dbh->query($sql_query_one) or die('error');
+    $list_two = $dbh->query($sql_query_two) or die('error');
     while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
         ?>
 
@@ -98,6 +99,21 @@ perfSONAR Analytics Summarization Tool</h1>
 <?php
     endwhile;
     ?>
+
+while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
+?>
+
+<?php echo "<option value=\"";
+    ?>
+<?php echo $row_list_two["domain"]; ?>
+
+<?php echo "\"></option>"; ?>
+
+
+<?php
+    endwhile;
+    ?>
+
 
 
 
