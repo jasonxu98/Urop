@@ -27,14 +27,7 @@ try {
 } catch (PDOExeption $e) {
   echo $e->getMessage();
 }
-    $arr = $stmt->fetch(PDO::FETCH_ASSOC);
-    <td><?php echo htmlspecialchars($arr['city']); ?></td>
-<td><?php echo htmlspecialchars($arr['temp_lo']); ?></td>
-<td><?php echo htmlspecialchars($arr['temp_hi']); ?></td>
-<td><?php echo htmlspecialchars($arr['prcp']); ?></td>
-<td><?php echo htmlspecialchars($arr['date']); ?></td>
-
-?> 
+   ?> 
 
 <!DOCTYPE HTML> 
 <html>
