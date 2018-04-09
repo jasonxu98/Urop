@@ -25,8 +25,9 @@ try {
 
   try {
   $list = $dbh->query($sql_query);
+      $test = pg_query($dbh, "SELECT * FROM ServerLookupbackup");
       
-      $arr = pg_fetch_all($list);
+      $arr = pg_fetch_all($test);
       
       print_r($arr);
 
