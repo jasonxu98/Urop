@@ -21,8 +21,8 @@ try {
 
 # Create query of table 
   $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL";try {
-  $stmt = $dbh->query($sql_query);
-  if ($stmt === false){
+  $list = $dbh->query($sql_query);
+  if ($list === false){
 	die("Error executing the query: $sql_query");
   }
 } catch (PDOExeption $e) {
