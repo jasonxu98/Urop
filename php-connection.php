@@ -11,6 +11,7 @@ echo "Hello<br>";
 
 try {
   $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+  if (!$dbh) { echo "There is erro"; }
   if ($dbh) {
 	echo "Connected to DB $dbname<br>";
   }
