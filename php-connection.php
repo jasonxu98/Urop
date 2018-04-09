@@ -31,6 +31,10 @@ try {
 } catch (PDOExeption $e) {
   echo $e->getMessage();
 }
+    $arr = pg_fetch_all($list);
+    
+    print_r($arr);
+
 
     while($row_list=pg_fetch_result($list, 1,0)){
         echo "WEIRD<br>";
