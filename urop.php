@@ -88,7 +88,7 @@ perfSONAR Analytics Summarization Tool</h1>
     while($row_list=pg_fetch_assoc($list)){
         ?>
 
-<?php echo "<option value=\""
+<?php echo "<option value=\"";
     ?>
 <?php echo $row_list["domain"]; ?>
 
