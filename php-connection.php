@@ -36,7 +36,7 @@ try {
 }
     
     while($row = $list->fetch(PDO::FETCH_ASSOC)){
-        echo htmlspecialchars($list['domain']);
+        echo htmlspecialchars($row['domain']);
         echo "WEIRD<br>";
     }
     echo "WEIRD<br>";

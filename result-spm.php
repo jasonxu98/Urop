@@ -27,6 +27,13 @@ try {
 } catch (PDOExeption $e) {
   echo $e->getMessage();
 }
+    
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
+    echo $row['city'];
+    
+    
+    endwhile;
+    
    ?>
 
 <!DOCTYPE HTML> 
