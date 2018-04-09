@@ -7,7 +7,6 @@ echo "Hello<br>";
     $dbname      = "zerses_tes";
     $user = "jasonxu";
     $password = "xzk3136";
-    $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     
 
 try {
