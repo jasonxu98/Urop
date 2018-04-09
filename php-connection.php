@@ -52,7 +52,7 @@ try {
  <tbody>
  <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
  <tr>
- <td><?php echo htmlspecialchars($row['city']); ?></td>
+ <td><?php echo htmlspecialchars($row['domain']); ?></td>
  <td><?php echo htmlspecialchars($row['temp_lo']); ?></td>
  <td><?php echo htmlspecialchars($row['temp_hi']); ?></td>
  <td><?php echo htmlspecialchars($row['prcp']); ?></td>
