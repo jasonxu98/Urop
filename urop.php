@@ -87,8 +87,9 @@ perfSONAR Analytics Summarization Tool</h1>
     $list = pg_query($dbh, "select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL");
     while($row_list=pg_fetch_assoc($list)){
         ?>
-<option value=<?php echo $row_list["domain"]; ?> >
+<option value=
 <?php echo $row_list["domain"]; ?>
+>
 </option>
 <?php
     }
