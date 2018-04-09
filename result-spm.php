@@ -27,8 +27,12 @@ try {
 } catch (PDOExeption $e) {
   echo $e->getMessage();
 }
-    $arr = pg_fetch_all($stmt);
-    print_r($arr);
+    $arr = $stmt->fetch(PDO::FETCH_ASSOC);
+    <td><?php echo htmlspecialchars($arr['city']); ?></td>
+<td><?php echo htmlspecialchars($arr['temp_lo']); ?></td>
+<td><?php echo htmlspecialchars($arr['temp_hi']); ?></td>
+<td><?php echo htmlspecialchars($arr['prcp']); ?></td>
+<td><?php echo htmlspecialchars($arr['date']); ?></td>
 
 ?> 
 
@@ -53,7 +57,7 @@ try {
  <tbody>
  <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
  <tr>
- <td><?php echo htmlspecialchars($row['city']); ?></td>
+ <td><?php echo $row['city']; ?></td>
  <td><?php echo htmlspecialchars($row['temp_lo']); ?></td>
  <td><?php echo htmlspecialchars($row['temp_hi']); ?></td>
  <td><?php echo htmlspecialchars($row['prcp']); ?></td>
