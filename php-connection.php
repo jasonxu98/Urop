@@ -20,9 +20,9 @@ try {
 }
 
 # Create query of table 
-    #$sql_query="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
+    $sql_query="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
     #$sql_query="select ipv4 from serverlookupbackup";
-    $sql_query="select * from serverlookupbackup";
+    #$sql_query="select * from serverlookupbackup";
 
   try {
   $list = $dbh->query($sql_query);
@@ -36,9 +36,9 @@ try {
 }
     
     while($row = $list->fetch(PDO::FETCH_ASSOC)) :
-    echo $row['ipv4'];
+    echo $row['domain'];
     
-    echo "WEIRD<br>";
+    
 
     
     
