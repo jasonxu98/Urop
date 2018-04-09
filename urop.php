@@ -87,10 +87,14 @@ perfSONAR Analytics Summarization Tool</h1>
     $list = $dbh->query($sql_query) or die('error');
     while($row_list=pg_fetch_assoc($list)){
         ?>
-<option value=
+
+<?php echo "<option value=\""
+    ?>
 <?php echo $row_list["domain"]; ?>
->
-</option>
+
+<?php echo "\"></option>";
+
+
 <?php
     }
     ?>
