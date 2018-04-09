@@ -75,6 +75,28 @@ perfSONAR Analytics Summarization Tool</h1>
    		<datalist id="browsers">
             <option value="perfsonar01.hep.wisc.edu">144.92.180.75</option>
 
+<?php
+    $host        = "t3pers13.physics.lsa.umich.edu";
+    #$host        = "localhost";
+    $port        = "5432";
+    $dbname      = "zerses_test";
+    $user = "jasonxu";
+    $password = "xzk3136";
+    $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+    $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL";
+    $list = pg_query($dbh, "select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL");
+    while($row_list=pg_fetch_assoc($list)){
+        ?>
+<option value=<?php echo $row_list["domain"]; ?> >
+<?php echo $row_list["domain"]; ?>
+</option>
+<?php
+    }
+    ?>
+
+?>
+
+
 
         </datalist>
     
