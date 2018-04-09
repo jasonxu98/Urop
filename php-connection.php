@@ -34,5 +34,6 @@ try {
         echo $row_list;
         echo "WEIRD<br>";
     }
+    echo "WEIRD<br>";
 ?> 
 
