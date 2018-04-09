@@ -83,7 +83,7 @@ perfSONAR Analytics Summarization Tool</h1>
     $user = "jasonxu";
     $password = "xzk3136";
     $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-    $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL";try {
+    $sql_query="select domain||'(ipv4)' from serverlookupbackup where ipv4 IS NOT NULL";
     $list = $dbh->query($sql_query);
     while($row_list=pg_fetch_assoc($list)){
         ?>
