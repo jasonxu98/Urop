@@ -30,8 +30,8 @@ try {
   echo $e->getMessage();
 }
 
-    while($row_list=pg_fetch_assoc($list)){
-        echo $row_list['domain'];
+    while($row_list=pg_fetch_array($list, null, PGSQL_ASSOC)){
+        echo $row_list;
     }
 ?> 
 
