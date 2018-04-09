@@ -35,10 +35,15 @@ try {
   echo $e->getMessage();
 }
     
-    while($row = $list->fetch(PDO::FETCH_ASSOC)){
-        echo htmlspecialchars($row['domain']);
-        echo "WEIRD<br>";
-    }
+    while($row = $list->fetch(PDO::FETCH_ASSOC)) :
+    echo $row['ipv4'];
+    
+    echo "WEIRD<br>";
+
+    
+    
+    endwhile;
+    
     echo "WEIRD<br>";
 ?> 
 
