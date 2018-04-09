@@ -32,6 +32,7 @@ try {
 
     while($row_list=pg_fetch_array($list, null, PGSQL_ASSOC)){
         echo $row_list;
+        echo "WEIRD<br>";
     }
 ?> 
 
