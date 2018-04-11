@@ -77,7 +77,7 @@ perfSONAR Analytics Summarization Tool</h1>
   	<tr>
     <td>
     	<input list="list1" name="src" onchange="limitDes(this.value)">
-   		<datalist id="one">
+   		<datalist id="list1">
 
 <?php
     $host        = "t3pers13.physics.lsa.umich.edu";
@@ -131,7 +131,7 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     <td>
     	<input list="browsers" name="des">
    		<datalist id="browsers">
-
+            <option value = "hello"> </option>
    		</datalist>
     </td> 
     <td>
