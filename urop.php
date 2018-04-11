@@ -215,6 +215,7 @@ function limitDes(str) {
         str1 = str1 + '<option value = "'  + ip_address + '"></option>';
         <?php endwhile; ?>
         document.getElementById("text").innerHTML= lastFour;
+        document.getElementById("browser").innerHTML= str1;
     }
     
 }
