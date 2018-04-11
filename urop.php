@@ -196,13 +196,10 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        var str1 = '<option>';
+        var str1 = '<option value = "zerses">Please Select</option>';
         var str2 = "Populate second box";
         
-        
-        
-
-        document.getElementById("text").innerHTML= str1.concat(str2);
+        document.getElementById("browser").innerHTML= str1;
         return;
     }
     
