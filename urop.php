@@ -197,19 +197,7 @@ function limitDes(str) {
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         if(lastFour == "ipv4") {
-            <?php
-                $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
-                $list_three = $dbh->query($sql_query_three) or die('error');
-            
-                while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
-                    $to_add = $row_list_three["domain"];
-                ?>
-            ip_address = "<?php echo $to_add; ?>";
-            str1 = str1 + '<option value = "'  + ip_address '"></option>';
-            <?php endwhile; ?>
-            document.getElementById("text").innerHTML= ip_address;
-
-        } else {
+                    } else {
             var str2 = "Populate second box";
             document.getElementById("text").innerHTML= str2;
         }
