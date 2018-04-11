@@ -175,19 +175,18 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     ?>
 </p>
 
-
-<script>
-
 <?php
-
+<script>
 function updateClock() {
 document.getElementById("demo").innerHTML = Date();
 }
 </script>
-
 ?>
 
+
 <script>
+
+
 function limitDes(str) {
     if (str=="") {
         document.getElementById("text").innerHTML="a";
