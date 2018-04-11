@@ -196,8 +196,8 @@ function limitDes(str) {
     
     
         if(lastFour == "ipv4") {
-        <?php
-                            document.getElementById("text").innerHTML= lastFour;
+  
+            document.getElementById("text").innerHTML= lastFour;
 
         } else if (lastFour == "ipv6");
             var str2 = "Populate second box";
