@@ -77,7 +77,7 @@ perfSONAR Analytics Summarization Tool</h1>
    		<datalist id="browsers">
 
 <?php
-    include 'dtb.php';
+    
     $sql_query_one="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
     $sql_query_two="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 IS NOT NULL";
     $list = $dbh->query($sql_query_one) or die('error');
@@ -201,7 +201,7 @@ function limitDes(str) {
         while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
             $to_add = $row_list_three["domain"];
         ?>
-        ip_address = <?php echo $to_add; ?>;
+        ip_address = "<?php echo $to_add; ?>";
         check = check + ip_address;
         str1 = str1 + '<option value = "'  + ip_address '"></option>';
         <?php endwhile; ?>
