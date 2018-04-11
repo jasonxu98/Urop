@@ -80,13 +80,7 @@ perfSONAR Analytics Summarization Tool</h1>
    		<datalist id="browsers">
 
 <?php
-    $host        = "t3pers13.physics.lsa.umich.edu";
-    #$host        = "localhost";
-    $port        = "5432";
-    $dbname      = "zerses_test";
-    $user = "jasonxu";
-    $password = "xzk3136";
-    $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+    include 'dtb.php';
     $sql_query_one="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
     $sql_query_two="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 IS NOT NULL";
     $list = $dbh->query($sql_query_one) or die('error');
@@ -201,6 +195,8 @@ function limitDes(str) {
         var lastFour = str.substr(str.length - 4);
         if(lastFour == "ipv4") {
             str1 = '<option value = "zerses">Please Select</option>';
+        } else {
+            
         }
         var str2 = "Populate second box";
         
