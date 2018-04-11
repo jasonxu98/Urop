@@ -190,13 +190,21 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        var str1 = '<option value = "jason">Please Select</option>';
+        var str1 = '<option value = "jason"></option>';
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         if(lastFour == "ipv4") {
-            str1 = '<option value = "zerses">Please Select</option>';
-        } else {
+            <?php
+                include 'dtb.php';
+                $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
+                $list_three = $dbh->query($sql_query_three) or die('error');
             
+                while($row_list_two = $list_three->fetch(PDO::FETCH_ASSOC)):
+                ?>
+                    var data_plus = <?php echo row_list_two[domain]; ?>
+            str1 = str1 + '<option value = "' + data_plus + '"></option>';
+            <?php endwhile; ?>
+
         }
         var str2 = "Populate second box";
         
