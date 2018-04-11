@@ -191,7 +191,7 @@ function limitDes(str) {
         var lastFour = str.substr(str.length - 4);
         var check = '';
         if(lastFour == "ipv4") {
-          <!--  <?php
+        <?php
                 $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
                 $list_three = $dbh->query($sql_query_three) or die('error');
             
@@ -202,8 +202,7 @@ function limitDes(str) {
             check = check + ip_address;
             str1 = str1 + '<option value = "'  + ip_address '"></option>';
             <?php endwhile; ?>
-            document.getElementById("text").innerHTML= str1;
-            -->
+            document.getElementById("text").innerHTML= check;
 
         } else {
             var str2 = "Populate second box";
