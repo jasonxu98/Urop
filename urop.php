@@ -238,11 +238,11 @@ function limitDes(str) {
 
 <script>
 function myFunction() {
-    document.getElementById("start").defaultValue = "2015-01-02T11:42:13.510";
-    document.getElementById("end").defaultValue = "2015-01-02T11:42:13.510";
+    document.getElementById("start").defaultValue = "2018-01-01T01:00";
+    document.getElementById("end").defaultValue = "2018-01-01T01:00";
 
 }
-
+</script>
 
 </body>
 </html>
