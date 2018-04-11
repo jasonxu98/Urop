@@ -195,14 +195,15 @@ function limitDes(str) {
         var lastFour = str.substr(str.length - 4);
         if(lastFour == "ipv4") {
             <?php
-                include 'dtb.php';
-                $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
+                                $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
                 $list_three = $dbh->query($sql_query_three) or die('error');
             
                 while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
                 ?>
-                    var ip_address = <?php echo row_list_three["domain"]; ?>;
-                                        
+                    
+                    str1 = str1 + '<option value = "'  + '"></option>';
+
+                    
             
                     <?php endwhile; ?>
 
