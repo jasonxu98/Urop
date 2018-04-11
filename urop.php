@@ -39,6 +39,11 @@ img.a {
   text-align:center;
 }
 
+#text {
+font-size:18px;
+text-align:center;
+}
+
 .image-link
 {
     text-decoration: none;
@@ -71,7 +76,7 @@ perfSONAR Analytics Summarization Tool</h1>
  	</tr>
   	<tr>
     <td>
-    	<input list="browsers" name="src">
+    	<input list="browsers" name="src" onchange="limitDes(this.value)">
    		<datalist id="browsers">
 
 <?php
@@ -160,16 +165,20 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
 
 </p>
 
+<p id="text">
+
+</p>
+
 <p id="p03"><a href="https://www.perfsonar.net" target = "_blank" class="image-link">
     <img class="a" src="pSLogo.png" alt="perfSONAR logo" style="width:209px;height:65px" >
 </a> </p>
 
 <p>
 <?php
-    if(!isset($_POST['src']))
-    {
-        $errorMessage .= "<li>You forgot to select your Gender!</li>";
-    }
+    # if(!isset($_POST['src']))
+    #{
+    #   $errorMessage .= "<li>You forgot to select!</li>";
+    #}
     ?>
 </p>
 
@@ -178,6 +187,20 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
 
 function updateClock() {
 document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+
+<script>
+function limitDes(str) {
+    if (str=="") {
+        document.getElementById("text").innerHTML="a";
+        return;
+    } else {
+        document.getElementById("text").innerHTML="there are something";
+        return;
+    }
+    
 }
 </script>
 
