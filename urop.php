@@ -196,13 +196,13 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        var str1 = '<optin';
+        var str1 = '<>';
         var str2 = "Populate second box";
         
         
         
 
-        document.getElementById("text").innerHTML= str2 + str1;
+        document.getElementById("text").innerHTML= str1.concat(str2);
         return;
     }
     
