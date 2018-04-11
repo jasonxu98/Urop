@@ -76,8 +76,8 @@ perfSONAR Analytics Summarization Tool</h1>
  	</tr>
   	<tr>
     <td>
-    	<input list="list1" name="src" onchange="limitDes(this.value)">
-   		<datalist id="list1">
+    	<input list="browsers" name="src" onchange="limitDes(this.value)">
+   		<datalist id="browsers">
 
 <?php
     $host        = "t3pers13.physics.lsa.umich.edu";
@@ -131,7 +131,8 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     <td>
     	<input list="browsers" name="des">
    		<datalist id="browsers">
-            <option value = "hello"> </option>
+    	<option value="Jason">
+    	<option value="Zerses">
    		</datalist>
     </td> 
     <td>
@@ -194,9 +195,10 @@ document.getElementById("demo").innerHTML = Date();
 function limitDes(str) {
     if (str=="") {
         document.getElementById("text").innerHTML="a";
+        return;
     } else {
-        var value = "<option value=/"Internet Explorer/"></option>";
-        document.getElementById("text").innerHTML= "showsomething";
+        document.getElementById("text").innerHTML="there are something";
+        return;
     }
     
 }
