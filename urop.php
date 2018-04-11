@@ -96,9 +96,9 @@ perfSONAR Analytics Summarization Tool</h1>
 
 <?php echo "<option value=\"";
     ?>
-<?php echo $row_list["domain"]; ?>
+<?php echo substr($row_list["domain"], 0, -1); ?>
 
-<?php echo \""></option>"; ?>
+<?php echo "\"></option>"; ?>
 
 
 <?php
