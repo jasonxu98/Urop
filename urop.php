@@ -183,7 +183,8 @@ document.getElementById("demo").innerHTML = Date();
 }
 </script>
 
-
+<?php
+    
 <script>
 function limitDes(str) {
     if (str=="") {
@@ -195,17 +196,7 @@ function limitDes(str) {
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         if(lastFour == "ipv4") {
-            <?php
-                $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
-                $list_three = $dbh->query($sql_query_three) or die('error');
             
-                while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
-                ?>
-            
-            str1 = str1 + '<option value = "'  + '"></option>';
-            <?php endwhile; ?>
-            document.getElementById("text").innerHTML= ip_address;
-
         } else {
             var str2 = "Populate second box";
             document.getElementById("text").innerHTML= str2;
@@ -220,6 +211,6 @@ function limitDes(str) {
 </script>
 
 
-
+?>
 </body>
 </html>
