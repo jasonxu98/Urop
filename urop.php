@@ -191,6 +191,7 @@ function limitDes(str) {
         return;
     } else {
         var str1 = '<option value = "jason"></option>';
+        var ip_address = '';
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         if(lastFour == "ipv4") {
@@ -200,7 +201,7 @@ function limitDes(str) {
             
                 while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
                 ?>
-            var ip_address = <?php echo 3;
+            ip_address = <?php echo 3; ?>
             str1 = str1 + '<option value = "'  + '"></option>';
             <?php endwhile; ?>
 
