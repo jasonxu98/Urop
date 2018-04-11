@@ -204,7 +204,7 @@ function limitDes(str) {
                     while($row_list_two = $list_three->fetch(PDO::FETCH_ASSOC)):
                         ?>
                         
-                    str1 = str1 + '<option value = "' + "hello" + '"></option>';
+                    str1 = str1 + '<option value = "' + 'hello' + '"></option>';
 
                     
             
