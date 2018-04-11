@@ -129,10 +129,9 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     
   	</td>
     <td>
-    	<input list="browsers" name="des">
-   		<datalist id="browsers">
-    	<option value="Jason">
-    	<option value="Zerses">
+    	<input list="browser" name="des">
+   		<datalist id="browser">
+
    		</datalist>
     </td> 
     <td>
@@ -197,7 +196,8 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        document.getElementById("text").innerHTML="there are something";
+        document.getElementById("browser").innerHTML="<option value=\"Internet Explorer\">
+        <option value=\"Firefox\">";
         return;
     }
     
