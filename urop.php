@@ -196,7 +196,7 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
     } else {
         var value = "<option value=/"Internet Explorer/"></option>";
-        document.getElementById("text").innerHTML= value;
+        document.getElementById("text").innerHTML= "showsomething";
     }
     
 }
