@@ -212,7 +212,7 @@ function limitDes(str) {
         ?>
         ip_address = "<?php echo $to_add; ?>";
         check = check + ip_address;
-        str1 = str1 + '<option value = "'  + ip_address '" + ></option>';
+        str1 = str1 + '<option value = "'  + ip_address + '"></option>';
         <?php endwhile; ?>
         document.getElementById("text").innerHTML= lastFour;
     }
