@@ -186,7 +186,7 @@ document.getElementById("demo").innerHTML = Date();
 
 function limitDes(str) {
         var str1 = '<option value = "jason"></option>';
-        var ip_address = '';
+        var ip_address = 'data:';
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         var check = '';
