@@ -204,7 +204,7 @@ function limitDes(str) {
                 while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
                     $to_add = row_list_three["domain"];
                 ?>
-            ip_address = "<?php echo $to_add ?>";
+            ip_address = "<?php echo $to_add; ?>";
             str1 = str1 + '<option value = "'  + '"></option>';
             <?php endwhile; ?>
             document.getElementById("text").innerHTML= ip_address;
