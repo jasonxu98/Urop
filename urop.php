@@ -131,8 +131,9 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     <td>
     	<input list="browser" name="des">
    		<datalist id="browser">
+
         </datalist>
-    </td> 
+    </td>
     <td>
     
      	<input name="start_time" type="datetime-local" min="2018-01-01T01:00">
@@ -195,7 +196,8 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        document.getElementById("text").innerHTML="there are something";
+        var str1 = '', str2 = "Populate second box";
+        document.getElementById("text").innerHTML= str2;
         return;
     }
     
