@@ -196,7 +196,7 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        var str1 = '<option value=Jason option value=Zerses>';
+        var str1 = '<>';
         var str2 = "Populate second box";
         
         
