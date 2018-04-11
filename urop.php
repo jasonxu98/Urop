@@ -204,7 +204,7 @@ function limitDes(str) {
     if (lastFour == 'ipv6') {
         <?php
         include 'dtb.php';
-        $sql_query_four="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 IS NULL";
+        $sql_query_four="select domain||'(ipv6)' as domain from serverlookupbackup where ipv4 IS NULL";
         $list_four = $dbh->query($sql_query_four);
         
         while($row_list_four = $list_four->fetch(PDO::FETCH_ASSOC)):
