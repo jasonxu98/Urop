@@ -199,11 +199,9 @@ function limitDes(str) {
         var str1 = "";
         var str2 = "Populate second box";
         
-        str1 = '<option value="Jason">
-        <option value="Zerses">';
+        
 
-
-        document.getElementById("text").innerHTML= str1;
+        document.getElementById("text").innerHTML= str2 + str1;
         return;
     }
     
