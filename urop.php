@@ -205,7 +205,7 @@ function limitDes(str) {
                     $to_add = $row_list_three["domain"];
                 ?>
             ip_address = "<?php echo $to_add; ?>";
-            str1 = str1 + '<option value = "'  + '"></option>';
+            str1 = str1 + '<option value = "'  + ip_address '"></option>';
             <?php endwhile; ?>
             document.getElementById("text").innerHTML= ip_address;
 
