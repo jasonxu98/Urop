@@ -96,7 +96,7 @@ perfSONAR Analytics Summarization Tool</h1>
 
 <?php echo "<option value=\"";
     ?>
-<?php echo substr($row_list["domain"], 0, -1); ?>
+<?php echo $row_list["domain"]; ?>
 
 <?php echo "\"></option>"; ?>
 
@@ -196,7 +196,12 @@ function limitDes(str) {
         document.getElementById("text").innerHTML="a";
         return;
     } else {
-        var str1 = '<option value = "zerses">Please Select</option>';
+        var str1 = '<option value = "jason">Please Select</option>';
+        str = str.slice(0,-1);
+        var lastFour = str.substr(str.length - 4);
+        if(lastFour == "ipv4") {
+            str1 = '<option value = "zerses">Please Select</option>';
+        }
         var str2 = "Populate second box";
         
         document.getElementById("browser").innerHTML= str1;
