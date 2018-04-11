@@ -194,11 +194,9 @@ document.getElementById("demo").innerHTML = Date();
 function limitDes(str) {
     if (str=="") {
         document.getElementById("text").innerHTML="a";
-        return;
     } else {
-        document.getElementById("browser").innerHTML="<option value=\"Internet Explorer\">
-        <option value=\"Firefox\">";
-        return;
+        var value = "<option value=/"Internet Explorer/"></option>";
+        document.getElementById("browser").innerHTML= value;
     }
     
 }
