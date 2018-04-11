@@ -202,10 +202,6 @@ function limitDes(str) {
     if (lastFour == 'ipv6') {
         document.getElementById("text").innerHTML= 'ipv6';
     } else if (lastFour == 'ipv4') {
-                ip_address = "";
-        check = check + ip_address;
-        str1 = str1 + '<option value = "'  + ip_address '"></option>';
-     
         document.getElementById("text").innerHTML= lastFour;
     }
     
