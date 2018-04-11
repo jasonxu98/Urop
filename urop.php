@@ -129,8 +129,8 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     
   	</td>
     <td>
-    	<input list="browsers" name="des">
-   		<datalist id="browsers">
+    	<input list="browser" name="des">
+   		<datalist id="browser">
     	<option value="Jason">
     	<option value="Zerses">
    		</datalist>
