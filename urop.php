@@ -135,11 +135,11 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     </td>
     <td>
     
-     	<input name="start_time" type="datetime-local" min="2018-01-01T01:00">
+     	<input id="start" name="start_time" type="datetime-local" min="2018-01-01T01:00">
      
     </td>
     <th>
-    <input name="end_time" type="datetime-local" min="2018-01-01T01:00">
+    <input id="end" name="end_time" type="datetime-local" min="2018-01-01T01:00">
     </th>
 	</tr>
   
@@ -236,6 +236,12 @@ function limitDes(str) {
 }
 </script>
 
+<script>
+function myFunction() {
+    document.getElementById("start").defaultValue = "2015-01-02T11:42:13.510";
+    document.getElementById("end").defaultValue = "2015-01-02T11:42:13.510";
+
+}
 
 
 </body>
