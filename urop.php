@@ -232,12 +232,13 @@ function limitDes(str) {
         document.getElementById("text").innerHTML= lastFour;
         document.getElementById("browser").innerHTML= str1;
     }
+    default_time();
     
 }
 </script>
 
 <script>
-function myFunction() {
+function default_time() {
     document.getElementById("start").defaultValue = "2018-01-01T01:00";
     document.getElementById("end").defaultValue = "2018-01-01T01:00";
 
