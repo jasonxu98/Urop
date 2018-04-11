@@ -192,22 +192,15 @@ function limitDes(str) {
         var check = '';
     
     
-            document.getElementById("text").innerHTML= lastFour;
     
-    
-        if(lastFour == 'ipv4') {
-  
-            
-
-        } else if (lastFour == 'ipv6');
-            var str2 = "Populate second box";
-            document.getElementById("text").innerHTML= str2;
-        }
-        
-        
-        document.getElementById("browser").innerHTML= str1;
-        return;
+    if (lastFour == 'ipv4') {
+        document.getElementById("text").innerHTML= lastFour;
+    } else if (lastFour == 'ipv6') {
+        document.getElementById("text").innerHTML= 'not valid';
     }
+    
+    
+    
     
 }
 </script>
