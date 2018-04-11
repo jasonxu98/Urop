@@ -76,8 +76,8 @@ perfSONAR Analytics Summarization Tool</h1>
  	</tr>
   	<tr>
     <td>
-    	<input list="browsers" name="src" onchange="limitDes(this.value)">
-   		<datalist id="browsers">
+    	<input list="one" name="src" onchange="limitDes(this.value)">
+   		<datalist id="one">
 
 <?php
     $host        = "t3pers13.physics.lsa.umich.edu";
