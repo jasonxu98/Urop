@@ -204,14 +204,17 @@ function limitDes(str) {
                     while($row_list_two = $list_three->fetch(PDO::FETCH_ASSOC)):
                         ?>
                         
-                    str1 = str1 + '<option value = "' + 'hello' + '"></option>';
+                    str1 = str1 + '<option value = "' + <?php echo row_list_two["domain"]; ?> + '"></option>';
 
                     
             
                     <?php endwhile; ?>
 
+        } else {
+            var str2 = "Populate second box";
+            document.getElementById("text").innerHTML= str2;
         }
-        var str2 = "Populate second box";
+        
         
         document.getElementById("browser").innerHTML= str1;
         return;
