@@ -191,11 +191,24 @@ function limitDes(str) {
         var lastFour = str.substr(str.length - 4);
         var check = '';
     
-        document.getElementById("text").innerHTML= lastFour;
     
     
     
-          
+    
+        if(lastFour == "ipv4") {
+        <?php
+                            document.getElementById("text").innerHTML= lastFour;
+
+        } else if (lastFour == "ipv6");
+            var str2 = "Populate second box";
+            document.getElementById("text").innerHTML= str2;
+        }
+        
+        
+        document.getElementById("browser").innerHTML= str1;
+        return;
+    }
+    
 }
 </script>
 
