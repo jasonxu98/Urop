@@ -164,6 +164,16 @@ while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
     <img class="a" src="pSLogo.png" alt="perfSONAR logo" style="width:209px;height:65px" >
 </a> </p>
 
+<p>
+<?php
+    if(!isset($_POST['src']))
+    {
+        $errorMessage .= "<li>You forgot to select your Gender!</li>";
+    }
+    ?>
+</p>
+
+
 <script>
 
 function updateClock() {
