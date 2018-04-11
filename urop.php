@@ -195,11 +195,11 @@ function limitDes(str) {
     
     
     
-        if(lastFour == "ipv4") {
+        if(lastFour == 'ipv4') {
   
             document.getElementById("text").innerHTML= lastFour;
 
-        } else if (lastFour == "ipv6");
+        } else if (lastFour == 'ipv6');
             var str2 = "Populate second box";
             document.getElementById("text").innerHTML= str2;
         }
