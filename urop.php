@@ -4,9 +4,6 @@
 <title>Page Title</title>
 
 <script type="text/javascript">
-window.onload = function() {
-    populateZone();
-};
 
 function populateZone() {
     var zones ='';
@@ -99,7 +96,7 @@ img.a {
 
 </style>
 </head>
-<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+<body onload="updateClock(); setInterval('updateClock()', 1000 ); populateZone();">
 
 <h1 style="font-size:50px;text-align:center;">
 
@@ -125,12 +122,6 @@ perfSONAR Analytics Summarization Tool</h1>
     <td>
     	<input list="browsers" name="src" onchange="limitDes(this.value)">
    		<datalist id="browsers">
-
-
-
-
-
-
 
         </datalist>
     
