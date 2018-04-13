@@ -207,10 +207,8 @@ function limitDes(str) {
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xhttp=new XMLHttpRequest();
-        } else {  // code for IE6, IE5
-            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhttp.open("GET", "des_get.php?src=" + src, true);
+        xhttp.open("GET", "des_get.php?src=" + str, true);
         xhttp.send();
         var result = xhttp.responseText;
         document.getElementById("text").innerHTML= result;
