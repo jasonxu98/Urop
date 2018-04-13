@@ -204,6 +204,12 @@ function limitDes(str) {
         str = str.slice(0,-1);
     
     if (lastFour == 'ipv6') {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhttp=new XMLHttpRequest();
+        } else {  // code for IE6, IE5
+            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
         xhttp.open("GET", "des_get.php?src=" + src, true);
         xhttp.send();
         var result = xhttp.responseText;
