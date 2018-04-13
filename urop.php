@@ -221,7 +221,7 @@ function limitDes(str) {
             }
         }
         xhttp.open("POST", "des_get.php", true);
-        xhttp.send("src = hello");
+        xhttp.send();
         document.getElementById("text").innerHTML= result;
 
     } else if (lastFour == 'ipv4') {
