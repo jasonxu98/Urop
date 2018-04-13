@@ -24,10 +24,11 @@
         echo notfound;
     } else {
     while($row3 = $list3->fetch(PDO::FETCH_ASSOC)):
-    $min = $row3["MinTime"];
-    $max = $row3["MaxTime"];
+    $min = $row3["mintime"];
+    $max = $row3["maxtime"];
     endwhile;
         echo gettype($min);
+        echo gettype($max);
     }
 
 
