@@ -215,8 +215,8 @@ function limitDes(str) {
         {// code for IE6, IE5
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhttp.open("POST", "des_get.php", true);
-        xhttp.setRequestHeader("Content-type");
+        xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/des_get.php", true);
+        xhttp.setRequestHeader("Content-type", "multipart/form-data");
         xhttp.onreadystatechange=function()
         {
             if (xhttp.readyState==4 && xhttp.status==200)
