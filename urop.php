@@ -329,12 +329,7 @@ function default_time() {
         xhttp.send(parameter);
         
     }
-    time_stamp = time_stamp.slice(0,-3);
-    var timeOne = time_stamp.substr(time_stamp.length - 16);
-    var timeTwo = time_stamp.slice(0,-19);
-    
-    document.getElementById("start").defaultValue = timeOne;
-    document.getElementById("end").defaultValue = timeTwo;
+    window.alert(time_stamp);
 
 }
 </script>
