@@ -7,7 +7,7 @@
     $sql_query_domain1="select " . $ip1 .  " as " . $ip1 . " from serverlookupbackup where domain = '" . $src . "';";
     $sql_query_domain2="select " . $ip2 .  " as " . $ip2 . " from serverlookupbackup where domain = '" . $dest . "';";
     $list1 = $dbh->query($sql_query_domain1);
-    $list2_three = $dbh->query($sql_query_domain2);
+    $list2 = $dbh->query($sql_query_domain2);
     
     while($row1 = $list1->fetch(PDO::FETCH_ASSOC)):
     $ipaddress1 = $row1[$ip1];

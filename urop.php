@@ -285,6 +285,7 @@ function reset() {
     document.getElementById("box2").value = "";
     document.getElementById("start").defaultValue = "0000-01-01T01:00";
     document.getElementById("end").defaultValue = "0000-01-01T01:00";
+    populateZone();
 }
 
 function default_time() {
