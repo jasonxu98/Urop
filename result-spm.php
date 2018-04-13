@@ -1,3 +1,6 @@
+<script>
+var x = "SELECT * FROM weather";
+</script>
 
 <?php
 
@@ -20,10 +23,7 @@ try {
 
 # Create query of table
     
-    <script>
-    var x = "SELECT * FROM weather";
-    </script>
-
+    
     $sql_query= "<script> document.write(x) </script>";
 try {
   $stmt = $dbh->query($sql_query);
