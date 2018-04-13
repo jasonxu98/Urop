@@ -17,7 +17,7 @@
     $ipaddress2 = $row2[$ip2];
     endwhile;
     
-    echo ipaddress1;
-    echo ipaddress2;
+    echo $ipaddress1;
+    echo $ipaddress2;
     
    ?>
