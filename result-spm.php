@@ -1,6 +1,6 @@
 <script>
 var x = "SELECT * FROM weather";
-</script>
+
 
 <?php
 
@@ -41,6 +41,7 @@ try {
     endwhile;
     
    ?>
+</script>
 
 <!DOCTYPE HTML> 
 <html>
