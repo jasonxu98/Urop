@@ -216,7 +216,7 @@ function limitDes(str) {
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
         xhttp.open("POST", "des_get.php", true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.setRequestHeader("Content-type");
         xhttp.onreadystatechange=function()
         {
             if (xhttp.readyState==4 && xhttp.status==200)
@@ -225,7 +225,7 @@ function limitDes(str) {
             }
         }
         
-        xhttp.send();
+        xhttp.send(parameter);
 
     } else if (lastFour == 'ipv4') {
         <?php
