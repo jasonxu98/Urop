@@ -321,7 +321,7 @@ function default_time() {
         {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
-                var time_stamp = xhttp.responseText;
+                var time_stamp = "xhttp.responseText";
             }
         }
         
