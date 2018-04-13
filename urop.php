@@ -203,7 +203,7 @@ function limitDes(str) {
         var check = '';
         str = str.slice(0,-5);
     
-    if (lastFour == 'ipv6') {
+    if (lastFour == 'ipv6' || lastFour == 'ipv4' ) {
         var xhttp;
         var parameter = "src=" + str +"&ip=" + lastFour;
         
@@ -227,22 +227,6 @@ function limitDes(str) {
         
         xhttp.send(parameter);
 
-    } else if (lastFour == 'ipv4') {
-        <?php
-        include 'dtb.php';
-        $sql_query_three="select domain||'(ipv4)' as domain from serverlookupbackup where ipv6 IS NULL";
-        $list_three = $dbh->query($sql_query_three);
-        
-        while($row_list_three = $list_three->fetch(PDO::FETCH_ASSOC)):
-            $to_add = $row_list_three["domain"];
-        ?>
-        ip_address = "<?php echo $to_add; ?>";
-        check = check + ip_address;
-        str1 = str1 + '<option value = "'  + ip_address + '"></option>';
-        <?php endwhile; ?>
-        document.getElementById("text").innerHTML= lastFour;
-        document.getElementById("browser").innerHTML= str1;
-        
     }
     default_time();
     
