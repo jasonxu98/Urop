@@ -24,7 +24,7 @@ try {
 # Create query of table
     
     
-    $sql_query= "<script> document.write(x) </script>";
+    $sql_query= <script> document.write(x) </script>;
 try {
   $stmt = $dbh->query($sql_query);
   if ($stmt === false){
