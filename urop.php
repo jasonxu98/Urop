@@ -203,7 +203,7 @@ function limitDes(str) {
         var check = '';
         str = str.slice(0,-5);
     
-    if (lastFour == 'ipv6' || lastFour == 'ipv4' ) {
+    if (lastFour == 'ipv4' || lastFour == 'ipv6' ) {
         var xhttp;
         var parameter = "src=" + str +"&ip=" + lastFour;
         
