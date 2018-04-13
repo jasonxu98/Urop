@@ -2,7 +2,7 @@
     $src = $_POST["src"];
     $ip = $_POST["ip"];
     include 'dtb.php';
-    $sql_query_domain="select" . $ip .  "as" . $ip . "from serverlookupbackup where domain = '" . $src . "';";
+    $sql_query_domain="select " . $ip .  " as " . $ip . " from serverlookupbackup where domain = '" . $src . "';";
     $list_three = $dbh->query($sql_query_domain);
     
     while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
