@@ -7,12 +7,20 @@
     while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
     $six = $row_list_domain["ipv6"];
     endwhile;
-    echo $six;
     
     $sql_query_dest = "select dest as dest from traceroute where src = '" . $six . "';";
     $list_four = $dbh->query($sql_query_dest);
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
-    $dest = $row_list_dest["dest"];
+        $dest = $row_list_dest["dest"];
+    
+        $sql_query_name="select domain||'(ipv6) as domain from serverlookupbackup where ipv6 = '" . $dest . "';";
+        $list_five = $dbh->query($sql_query_name);
+    
+        while($row_list_site = $list_five->fetch(PDO::FETCH_ASSOC)):
+            $site = $row_list_site["domain"];
+    echo $site;
+        endwhile;
+    
     echo $dest;
     endwhile;
    
