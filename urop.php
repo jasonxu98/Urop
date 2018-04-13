@@ -220,7 +220,7 @@ function limitDes(str) {
                 document.getElementById("text").innerHTML= xhttp.responseText;
             }
         }
-        xhttp.open("POST", "des_get.php", true);
+        xhttp.open("POST", "des_get.php?src=hello", true);
         xhttp.send();
         document.getElementById("text").innerHTML= result;
 
