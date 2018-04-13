@@ -197,7 +197,7 @@ function limitDes(str) {
         var str1 = '';
         var str2 = '';
         var ip_address = '';
-    var ip_address_ = '';
+        var ip_address_ = '';
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         var check = '';
@@ -233,7 +233,40 @@ function limitDes(str) {
 }
 
 function limitsrc(str) {
+    var str1 = '';
+    var str2 = '';
+    var ip_address = '';
+    var ip_address_ = '';
+    str = str.slice(0,-1);
+    var lastFour = str.substr(str.length - 4);
+    var check = '';
+    str = str.slice(0,-5);
     
+    if (lastFour == 'ipv4' || lastFour == 'ipv6' ) {
+        var xhttp;
+        var parameter = "src=" + str +"&ip=" + lastFour;
+        
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/src_get.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.onreadystatechange=function()
+        {
+            if (xhttp.readyState==4 && xhttp.status==200)
+            {
+                document.getElementById("browsers").innerHTML= xhttp.responseText;
+            }
+        }
+        
+        xhttp.send(parameter);
+        
+    }
 }
 
 </script>
