@@ -225,7 +225,7 @@ function limitDes(str) {
             }
         }
         
-        xhttp.send();
+        xhttp.send(parameter);
 
     } else if (lastFour == 'ipv4') {
         <?php
