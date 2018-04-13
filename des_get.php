@@ -8,5 +8,12 @@
     $six = $row_list_domain["ipv6"];
     endwhile;
     echo $six;
+    
+    $sql_query_dest = "select dest as dest from traceroute where src = '" . $six . "';";
+    $list_four = $dbh->query($sql_query_dest)
+    while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
+    $dest = $row_list_dest["dest"];
+    echo $dest;
+    endwhile;
    
 ?>
