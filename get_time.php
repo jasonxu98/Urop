@@ -23,13 +23,7 @@
     if ($list3 === false) {
         echo nooutput;
     } else {
-    while($row3 = $list3->fetch(PDO::FETCH_ASSOC)):
-    $min = $row3["MinTime"];
-    $max = $row3["MaxTime"];
-    endwhile;
-    echo $min;
-    echo $max;
-    }
+        echo output;    }
 
 
     
