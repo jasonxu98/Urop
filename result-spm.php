@@ -11,6 +11,7 @@ $port        = "5432";
 $dbname      = "jasonxu";
 $user = "jasonxu"; 
 $password = "xzk3136";
+    </script>
 
 try {
   $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
@@ -41,7 +42,7 @@ try {
     endwhile;
     
    ?>
-</script>
+
 
 <!DOCTYPE HTML> 
 <html>
