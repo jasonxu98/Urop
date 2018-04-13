@@ -27,8 +27,8 @@
     $min = $row3["mintime"];
     $max = $row3["maxtime"];
     endwhile;
-        echo gettype($min);
-        echo gettype($max);
+        echo $min;
+        echo $max;
     }
 
 
