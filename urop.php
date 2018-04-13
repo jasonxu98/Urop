@@ -202,7 +202,7 @@ function limitDes(str) {
         var lastFour = str.substr(str.length - 4);
         var check = '';
         str = str.slice(0,-1);
-        testad = "select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
+        var testad = "select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
     
     if (lastFour == 'ipv6') {
         <?php
