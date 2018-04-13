@@ -205,7 +205,7 @@ function limitDes(str) {
     
     if (lastFour == 'ipv6') {
         var xhttp;
-        var parameter = "src=" + str;
+        var parameter = "src=" + str +"ip=" + lastFour;
         
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari

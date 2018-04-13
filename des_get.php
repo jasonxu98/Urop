@@ -1,7 +1,8 @@
 <?php
     $src = $_POST["src"];
+    $ip = $_POST["ip"];
     include 'dtb.php';
-    $sql_query_domain="select ipv6 as ipv6 from serverlookupbackup where domain = '" . $src . "';";
+    $sql_query_domain="select" . $ip .  "as" . $ip . "from serverlookupbackup where domain = '" . $src . "';";
     $list_three = $dbh->query($sql_query_domain);
     
     while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
@@ -13,7 +14,7 @@
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["dest"];
     
-        $sql_query_name="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 = '" . $dest . "';";
+        $sql_query_name="select domain||'(" . $ip .  ")' as domain from serverlookupbackup where " . $ip .  " = '" . $dest . "';";
         $list_five = $dbh->query($sql_query_name);
     
     if($row_list_site = $list_five->fetch(PDO::FETCH_ASSOC)) {
