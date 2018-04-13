@@ -201,7 +201,7 @@ function limitDes(str) {
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         var check = '';
-        str = str.slice(0,-1);
+        str = str.slice(0,-5);
     
     if (lastFour == 'ipv6') {
         var xhttp;
