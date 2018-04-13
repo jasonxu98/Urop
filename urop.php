@@ -202,11 +202,12 @@ function limitDes(str) {
         var lastFour = str.substr(str.length - 4);
         var check = '';
         str = str.slice(0,-1);
+        testad = "select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
     
     if (lastFour == 'ipv6') {
         <?php
         include 'dtb.php';
-        $sql_query_four="select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
+        $sql_query_four= "<script>document.write(testad)</script>";
         $list_four = $dbh->query($sql_query_four);
         
         while($row_list_four = $list_four->fetch(PDO::FETCH_ASSOC)):
