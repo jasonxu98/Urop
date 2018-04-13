@@ -329,7 +329,8 @@ function default_time() {
         xhttp.send(parameter);
         
     }
-        document.getElementById("start").defaultValue = "2018-01-01T01:00";
+    document.getElementById("text").innerHTML = time_stamp;
+    document.getElementById("start").defaultValue = "2018-01-01T01:00";
     document.getElementById("end").defaultValue = "2018-01-01T01:00";
 
 }
