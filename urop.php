@@ -205,7 +205,7 @@ function limitDes(str) {
     
     if (lastFour == 'ipv6') {
         var xhttp;
-        var parameter = "src=michigan";
+        var parameter = "src=" + str;
         
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
