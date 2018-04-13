@@ -322,7 +322,6 @@ function default_time() {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
                 time_stamp = xhttp.responseText;
-                window.alert(time_stamp);
             }
         }
         
@@ -330,6 +329,8 @@ function default_time() {
         xhttp.send(parameter);
         
     }
+    time_stamp = time_stamp.slice(0,-3);
+    window.alert(time_stamp);
     
 }
 </script>
