@@ -216,7 +216,7 @@ function limitDes(str) {
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
         xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/des_get.php", true);
-        xhttp.setRequestHeader("Content-type", "multipart/form-data");
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.onreadystatechange=function()
         {
             if (xhttp.readyState==4 && xhttp.status==200)
