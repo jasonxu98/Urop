@@ -19,7 +19,7 @@
     if($row_list_site = $list_five->fetch(PDO::FETCH_ASSOC)) {
         $site = $row_list_site["domain"];
     }
-    echo $site;
+    echo '<option value = "' . $site . '"></option>';
     endwhile;
    
 ?>
