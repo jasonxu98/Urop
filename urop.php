@@ -204,18 +204,23 @@ function limitDes(str) {
         str = str.slice(0,-1);
     
     if (lastFour == 'ipv6') {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
+        var xhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
             xhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
         xhttp.onreadystatechange=function()
         {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
-                var result = xhttp.responseText;
+                document.getElementById("text").innerHTML= xhttp.responseText;
             }
         }
-        xhttp.open("POST", "des_get.php?src=" + str, true);
+        xhttp.open("POST", "des_get.php", true);
         xhttp.send();
         document.getElementById("text").innerHTML= result;
 
