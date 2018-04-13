@@ -324,11 +324,7 @@ function default_time() {
                 time_stamp = xhttp.responseText;
                 alert(time_stamp);
                 alert(typeof stamp);
-                var timeOne = time_stamp.substr(time_stamp.length - 16);
-                var timeTwo = time_stamp.slice(0,-19);
-    
-                document.getElementById("start").defaultValue = timeOne;
-                document.getElementById("end").defaultValue = timeTwo;
+                
 
             }
         }
