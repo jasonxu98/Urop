@@ -221,7 +221,7 @@ function limitDes(str) {
         {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
-                document.getElementById("browser").innerHTML= xhttp.responseText;
+                document.getElementById("text").innerHTML= xhttp.responseText;
             }
         }
         
