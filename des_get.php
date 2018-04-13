@@ -1,5 +1,5 @@
 <?php
-    //$src = $_POST["src"];
     $src = "hellp";
+    $src = $_POST["src"];
     echo $src;
 ?>
