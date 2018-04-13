@@ -1,3 +1,7 @@
+<script>
+var x = "SELECT * FROM weather";
+</script>
+
 <?php
 
 echo "Hello<br>";
@@ -17,8 +21,10 @@ try {
 	echo "Error connecting to DB:".$e->getMessage();
 }
 
-# Create query of table 
-$sql_query="SELECT * FROM weather";
+# Create query of table
+    
+    
+    $sql_query= "<script> document.write(x) </script>";
 try {
   $stmt = $dbh->query($sql_query);
   if ($stmt === false){
