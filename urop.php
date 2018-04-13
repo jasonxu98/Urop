@@ -283,13 +283,13 @@ function limitsrc(str) {
 function reset() {
     document.getElementById("box1").value = "";
     document.getElementById("box2").value = "";
-    document.getElementById("start").Value = NULL;
-    document.getElementById("end").Value = NULL;
+    document.getElementById("start").defaultValue = NULL;
+    document.getElementById("end").defaultValue = NULL;
 }
 
 function default_time() {
-    document.getElementById("start").Value = "2018-01-01T01:00";
-    document.getElementById("end").Value = "2018-01-01T01:00";
+    document.getElementById("start").defaultValue = "2018-01-01T01:00";
+    document.getElementById("end").defaultValue = "2018-01-01T01:00";
 
 }
 </script>
