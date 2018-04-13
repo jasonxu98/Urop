@@ -154,7 +154,7 @@ perfSONAR Analytics Summarization Tool</h1>
   
   <br><br>
   <input type="submit" value="Query">
-  <input type="reset">
+  <input type="reset" value="Reset the form">
 </form>
 
 
