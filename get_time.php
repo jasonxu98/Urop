@@ -27,9 +27,7 @@
     $min = $row3["MinTime"];
     $max = $row3["MaxTime"];
     endwhile;
-        if($min === false) {
-            echo $ipaddress1;
-        };
+    echo $min->format('M j Y g:i A');
     echo $max;
     }
 
