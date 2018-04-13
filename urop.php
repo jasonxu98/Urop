@@ -281,10 +281,7 @@ function limitsrc(str) {
 
 <script>
 function reset() {
-    document.getElementById("box1").value = "";
-    document.getElementById("box2").value = "";
-    document.getElementById("start").Value = "";
-    document.getElementById("end").Value = "";
+    
 }
 
 function default_time() {
