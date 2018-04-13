@@ -220,8 +220,8 @@ function limitDes(str) {
                 document.getElementById("text").innerHTML= xhttp.responseText;
             }
         }
-        xhttp.open("POST", "des_get.php?src=hello", true);
-        xhttp.send();
+        xhttp.open("POST", "des_get.php", true);
+        xhttp.send("src = hello");
         document.getElementById("text").innerHTML= result;
 
     } else if (lastFour == 'ipv4') {
