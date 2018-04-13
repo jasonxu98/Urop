@@ -42,6 +42,8 @@ function populateZone() {
     ?>
     
     document.getElementById("browsers").innerHTML = zones;
+    document.getElementById("browser").innerHTML = zones;
+
 }
 
 
@@ -199,15 +201,16 @@ function limitDes(str) {
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         var check = '';
+        str = str.slice(0,-1);
     
     if (lastFour == 'ipv6') {
         <?php
         include 'dtb.php';
-        $sql_query_four="select domain||'(ipv6)' as domain from serverlookupbackup where ipv4 IS NULL";
+        $sql_query_four="select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
         $list_four = $dbh->query($sql_query_four);
         
         while($row_list_four = $list_four->fetch(PDO::FETCH_ASSOC)):
-            $to_add_ = $row_list_four["domain"];
+            $to_add_ = $row_list_four["ipv4"];
         ?>
         ip_address_ = "<?php echo $to_add_; ?>";
         str2 = str2 + '<option value = "'  + ip_address_ + '"></option>';
@@ -234,6 +237,11 @@ function limitDes(str) {
     default_time();
     
 }
+
+function limitsrc(str) {
+    
+}
+
 </script>
 
 <script>
