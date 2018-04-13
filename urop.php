@@ -284,10 +284,50 @@ function reset() {
     document.getElementById("box1").value = "";
     document.getElementById("box2").value = "";
     document.getElementById("start").defaultValue = "0000-01-01T01:00";
-    document.getElementById("end").defaultValue = "2000-01-01T01:00";
+    document.getElementById("end").defaultValue = "0000-01-01T01:00";
 }
 
 function default_time() {
+    var src = document.getElementById("box1").value;
+    var dest = document.getElementById("box2").value;
+    
+    
+    
+    
+    src = src.slice(0,-1);
+    var lastFour1 = src.substr(src.length - 4);
+    src = src.slice(0,-5);
+    
+    dest = dest.slice(0,-1);
+    var lastFour2 = dest.substr(dest.length - 4);
+    dest = dest.slice(0,-5);
+    
+    if ((lastFour1 == 'ipv4' || lastFour1 == 'ipv6') && (lastFour2 == 'ipv4' || lastFour2 == 'ipv6')) {
+        var xhttp;
+        var parameter = "src=" + src +"&ip1=" + lastFour1 + "&dest=" + dest +"&ip2=" + lastFour2;
+        
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/get_time.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.onreadystatechange=function()
+        {
+            if (xhttp.readyState==4 && xhttp.status==200)
+            {
+                document.getElementById("text").innerHTML= xhttp.responseText;
+            }
+        }
+        
+        xhttp.send(parameter);
+        
+    }
+
     document.getElementById("start").defaultValue = "2018-01-01T01:00";
     document.getElementById("end").defaultValue = "2018-01-01T01:00";
 
