@@ -206,8 +206,8 @@ function limitDes(str) {
     if (lastFour == 'ipv6') {
         var xhttp;
         var parameter = "src=michigan";
-        xhttp.open("POST", "des_get.php", true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        
+        
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
             xhttp=new XMLHttpRequest();
@@ -216,6 +216,7 @@ function limitDes(str) {
         {// code for IE6, IE5
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
+        xhttp.open("POST", "des_get.php", true);
         xhttp.onreadystatechange=function()
         {
             if (xhttp.readyState==4 && xhttp.status==200)
