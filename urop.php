@@ -288,8 +288,8 @@ function reset() {
 }
 
 function default_time() {
-    document.getElementById("start").defaultValue = "2018-01-01T01:00";
-    document.getElementById("end").defaultValue = "2018-01-01T01:00";
+    document.getElementById("start").Value = "2018-01-01T01:00";
+    document.getElementById("end").Value = "2018-01-01T01:00";
 
 }
 </script>
