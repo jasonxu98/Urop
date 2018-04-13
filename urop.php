@@ -196,7 +196,7 @@ document.getElementById("demo").innerHTML = Date();
 function limitDes(str) {
         var str1 = '';
         var str2 = '';
-        var ip_address = 'data:';
+        var ip_address = '';
     var ip_address_ = '';
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
@@ -206,6 +206,8 @@ function limitDes(str) {
     if (lastFour == 'ipv6') {
         var xhttp;
         var parameter = "src=michigan";
+        xhttp.open("POST", "des_get.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
             xhttp=new XMLHttpRequest();
@@ -221,9 +223,8 @@ function limitDes(str) {
                 document.getElementById("text").innerHTML= xhttp.responseText;
             }
         }
-        xhttp.open("POST", "des_get.php", true);
+        
         xhttp.send(parameter);
-        document.getElementById("text").innerHTML= result;
 
     } else if (lastFour == 'ipv4') {
         <?php
