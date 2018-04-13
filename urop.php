@@ -208,9 +208,15 @@ function limitDes(str) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xhttp=new XMLHttpRequest();
         }
-        xhttp.open("GET", "des_get.php?src=" + str, true);
+        xhttp.onreadystatechange=function()
+        {
+            if (xhttp.readyState==4 && xhttp.status==200)
+            {
+                var result = xhttp.responseText;
+            }
+        }
+        xhttp.open("POST", "des_get.php?src=" + str, true);
         xhttp.send();
-        var result = xhttp.responseText;
         document.getElementById("text").innerHTML= result;
 
     } else if (lastFour == 'ipv4') {
