@@ -6,7 +6,7 @@
     $list_three = $dbh->query($sql_query_domain);
     
     while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
-    $six = $row_list_domain["ipv6"];
+    $six = $row_list_domain[$ip];
     endwhile;
     
     $sql_query_dest = "select dest as dest from traceroute where src = '" . $six . "';";
