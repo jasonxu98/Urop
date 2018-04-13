@@ -122,14 +122,14 @@ perfSONAR Analytics Summarization Tool</h1>
  	</tr>
   	<tr>
     <td>
-    	<input list="browsers" name="src" onchange="limitDes(this.value)">
+    	<input list="browsers" name="src" onchange="limitDes(this.value)" id ="box1">
    		<datalist id="browsers">
 
         </datalist>
     
   	</td>
     <td>
-    	<input list="browser" name="des" onchange="limitsrc(this.value)">
+    	<input list="browser" name="des" onchange="limitsrc(this.value)" id="box2">
    		<datalist id="browser">
 
         </datalist>
@@ -228,7 +228,10 @@ function limitDes(str) {
         xhttp.send(parameter);
 
     }
-    default_time();
+    $other_box = document.getElementById("box2").value;
+    if(other_box) {
+        default_time();
+    }
     
 }
 
@@ -266,6 +269,11 @@ function limitsrc(str) {
         
         xhttp.send(parameter);
         
+    }
+    
+    $other_box = document.getElementById("box2").value;
+    if(other_box) {
+        default_time();
     }
 }
 
