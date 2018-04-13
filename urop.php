@@ -205,6 +205,7 @@ function limitDes(str) {
     
     if (lastFour == 'ipv6') {
         var xhttp;
+        var parameter = "src=michigan";
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
             xhttp=new XMLHttpRequest();
@@ -221,7 +222,7 @@ function limitDes(str) {
             }
         }
         xhttp.open("POST", "des_get.php", true);
-        xhttp.send();
+        xhttp.send(parameter);
         document.getElementById("text").innerHTML= result;
 
     } else if (lastFour == 'ipv4') {
