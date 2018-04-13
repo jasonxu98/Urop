@@ -154,9 +154,9 @@ perfSONAR Analytics Summarization Tool</h1>
   
   <br><br>
   <input type="submit" value="Query">
-  </form>
-    <button onclick="reset()">Reset</button>
 
+</form>
+<button onclick="reset()">Reset</button>
 
 
 
@@ -281,7 +281,10 @@ function limitsrc(str) {
 
 <script>
 function reset() {
-    
+    document.getElementById("box1").value = "";
+    document.getElementById("box2").value = "";
+    document.getElementById("start").Value = "";
+    document.getElementById("end").Value = "";
 }
 
 function default_time() {
