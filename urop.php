@@ -204,19 +204,10 @@ function limitDes(str) {
         str = str.slice(0,-1);
     
     if (lastFour == 'ipv6') {
-        <?php
-        include 'dtb.php';
-        $sql_query_four="select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
-        $list_four = $dbh->query($sql_query_four);
-        
-        while($row_list_four = $list_four->fetch(PDO::FETCH_ASSOC)):
-            $to_add_ = $row_list_four["ipv4"];
-        ?>
-        ip_address_ = "<?php echo $to_add_; ?>";
-        str2 = str2 + '<option value = "'  + ip_address_ + '"></option>';
-        <?php endwhile; ?>
-        document.getElementById("text").innerHTML= lastFour;
-        document.getElementById("browser").innerHTML= str2;
+        xhttp.open("GET", "des_get.php?src=" + src, true);
+        xhttp.send();
+        var result = xhttp.responseText;
+        document.getElementById("text").innerHTML= result;
 
     } else if (lastFour == 'ipv4') {
         <?php
@@ -233,6 +224,7 @@ function limitDes(str) {
         <?php endwhile; ?>
         document.getElementById("text").innerHTML= lastFour;
         document.getElementById("browser").innerHTML= str1;
+        
     }
     default_time();
     
