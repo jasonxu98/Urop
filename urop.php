@@ -197,17 +197,16 @@ function limitDes(str) {
         var str1 = '';
         var str2 = '';
         var ip_address = 'data:';
-        var ip_address_ = '';
+    var ip_address_ = '';
         str = str.slice(0,-1);
         var lastFour = str.substr(str.length - 4);
         var check = '';
         str = str.slice(0,-1);
-        var x = "select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
     
     if (lastFour == 'ipv6') {
         <?php
         include 'dtb.php';
-        $sql_query_four= "<script>document.write(x)</script>";
+        $sql_query_four="select ipv4 as ipv4 from serverlookupbackup where domain = 'perfsonar01.hep.wisc.edu'";
         $list_four = $dbh->query($sql_query_four);
         
         while($row_list_four = $list_four->fetch(PDO::FETCH_ASSOC)):
