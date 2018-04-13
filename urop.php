@@ -322,6 +322,8 @@ function default_time() {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
                 time_stamp = xhttp.responseText;
+                alert(time_stamp);
+                alert(typeof stamp);
                 var timeOne = time_stamp.substr(time_stamp.length - 16);
                 var timeTwo = time_stamp.slice(0,-19);
     
@@ -335,7 +337,7 @@ function default_time() {
         xhttp.send(parameter);
         
     }
-        
+    
 }
 </script>
 
