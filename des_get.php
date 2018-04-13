@@ -16,8 +16,9 @@
         $sql_query_name="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 = '" . $dest . "';";
         $list_five = $dbh->query($sql_query_name);
     
-        $row_list_site = $list_five->fetch(PDO::FETCH_ASSOC)):
+    if($row_list_site = $list_five->fetch(PDO::FETCH_ASSOC)) {
         $site = $row_list_site["domain"];
+    }
     echo $site;
     endwhile;
    
