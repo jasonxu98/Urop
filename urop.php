@@ -228,7 +228,7 @@ function limitDes(str) {
         xhttp.send(parameter);
 
     }
-    $other_box = document.getElementById("box2").value;
+    var other_box = document.getElementById("box2").value;
     if(other_box) {
         default_time();
     }
@@ -271,7 +271,7 @@ function limitsrc(str) {
         
     }
     
-    $other_box = document.getElementById("box2").value;
+    var other_box = document.getElementById("box2").value;
     if(other_box) {
         default_time();
     }
