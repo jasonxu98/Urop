@@ -283,8 +283,7 @@ function limitsrc(str) {
 function reset() {
     document.getElementById("box1").value = "";
     document.getElementById("box2").value = "";
-    document.getElementById("start").defaultValue = NULL;
-    document.getElementById("end").defaultValue = NULL;
+    
 }
 
 function default_time() {
