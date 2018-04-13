@@ -20,7 +20,7 @@
     echo $ipaddress1;
     echo $ipaddress2;
     
-    $sql_query_time = "select src, dest, to_char(min(timestamp), 'YYYY-MM-DD"T"HH24:MI:SS') as MinTime, to_char(max(timestamp), 'YYYY-MM-DD"T"HH24:MI:SS') as MaxTime from rawtracedatabackup where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
+    $sql_query_time = "select src, dest, to_char(min(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MinTime, to_char(max(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MaxTime from rawtracedatabackup where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
     $list3 = $dbh->query($sql_query_time);
     while($row3 = $list3->fetch(PDO::FETCH_ASSOC)):
     $min = $row3["MinTime"];
