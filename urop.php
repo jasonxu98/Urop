@@ -291,7 +291,7 @@ function reset() {
 function default_time() {
     var src = document.getElementById("box1").value;
     var dest = document.getElementById("box2").value;
-    
+    var time_stamp ='';
     
     
     
@@ -321,7 +321,7 @@ function default_time() {
         {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
-                var time_stamp = "xhttp.responseText";
+                time_stamp = xhttp.responseText;
             }
         }
         
@@ -329,8 +329,7 @@ function default_time() {
         xhttp.send(parameter);
         
     }
-    document.getElementById("text").innerHTML = time_stamp;
-    document.getElementById("start").defaultValue = "2018-01-01T01:00";
+        document.getElementById("start").defaultValue = "2018-01-01T01:00";
     document.getElementById("end").defaultValue = "2018-01-01T01:00";
 
 }
