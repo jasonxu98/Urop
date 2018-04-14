@@ -325,8 +325,8 @@ function default_time() {
                 response = response.slice(0,-3);
                 var ip1 = response.substr(response.length - 16);
                 var ip2 = response.slice(0,-19);
-                document.getElementById("start").defaultValue = ip1;
-                document.getElementById("end").defaultValue = ip2;
+                document.getElementById("start").defaultValue = ip2;
+                document.getElementById("end").defaultValue = ip1;
             }
         }
         
