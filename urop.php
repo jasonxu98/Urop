@@ -291,7 +291,7 @@ function reset() {
 function default_time() {
     var src = document.getElementById("box1").value;
     var dest = document.getElementById("box2").value;
-    var time_stamp ='';
+    
     
     
     
@@ -321,8 +321,9 @@ function default_time() {
         {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
-                alert(typeof xhttp.responseText);
-                               
+                var response = xhttp.responseText;
+                alert(typeof response);
+                
 
             }
         }
