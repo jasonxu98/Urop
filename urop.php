@@ -322,7 +322,8 @@ function default_time() {
             if (xhttp.readyState==4 && xhttp.status==200)
             {
                 var response = xhttp.responseText;
-                alert(typeof response);
+                response = response.slice(0,-1);
+                alert(response);
                 
 
             }
