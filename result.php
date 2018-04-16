@@ -59,10 +59,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     if ($dbh) {
         echo "Connected to DB $dbname<br>";
-    } catch ( PDOException $e) {
-        echo "Error connecting to DB:".$e->getMessage();
-    }
-
+    } 
 
     
     
