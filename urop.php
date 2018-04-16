@@ -75,7 +75,7 @@ body {
 
 #p04 {
 font-size:25px;
-border: 1px solid ;
+
 padding: 30px;
 }
 
@@ -83,7 +83,7 @@ padding: 30px;
 
 form {
     font-size:25px;
-border: 1px solid ;
+
 padding: 30px;
 
 }
@@ -156,13 +156,9 @@ perfSONAR Analytics Summarization Tool</h1>
   
 </table>
 
-
-
-
-
-  
-  <br><br>
+<p id="p04">
   <input type="submit" value="Query">
+</p>
 
 </form>
 <button onclick="reset()">Reset</button>
