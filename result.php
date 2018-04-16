@@ -31,6 +31,10 @@ tr:hover {
     background-color:#ffffff;
 }
 
+h{
+    text-align:center;
+}
+
 </style>
 </head>
 
