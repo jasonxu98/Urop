@@ -77,7 +77,7 @@ padding: .5em;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 6px;
-  color: #fff;
+  color: black;
 font-family: 'Oswald';
 font-size: 20px;
 text-decoration: none;
