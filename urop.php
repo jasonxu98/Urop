@@ -76,7 +76,7 @@ body {
 #p04 {
 font-size:25px;
 
-padding:10px 30px 15px;
+padding: 0px 30px 15px;
 }
 
 
