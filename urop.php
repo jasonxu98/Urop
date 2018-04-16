@@ -52,6 +52,44 @@ function populateZone() {
 
 
 <style>
+#button1 {
+background-color: #bbb;
+padding: .5em;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 6px;
+color: #fff;
+font-family: 'Oswald';
+font-size: 20px;
+text-decoration: none;
+border: none;
+}
+
+#button1 {
+border: none;
+background: orange;
+box-shadow: 0px 0px 1px #777;
+}
+
+#button2 {
+background-color: #bbb;
+padding: .5em;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 6px;
+color: #fff;
+font-family: 'Oswald';
+font-size: 20px;
+text-decoration: none;
+border: none;
+}
+
+#button2 {
+border: none;
+background: orange;
+box-shadow: 0px 0px 1px #777;
+}
+
 body {
   # background-image: url("")
 
@@ -157,12 +195,12 @@ perfSONAR Analytics Summarization Tool</h1>
 </table>
 
 
-  <input type="submit" value="Query">
+  <input type="submit" value="Query" id = "button1">
 
 
 </form>
 <p id="p04">
-<button onclick="reset()">Reset</button>
+<button onclick="reset()" id = "button2">Reset</button>
 </p>
 
 
