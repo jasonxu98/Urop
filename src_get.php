@@ -9,7 +9,7 @@
     $six = $row_list_domain[$ip];
     endwhile;
     
-    $sql_query_dest = "select src as src from traceroute where dest = '" . $six . "';";
+    $sql_query_dest = "select DISTINCT src as src from traceroute where dest = '" . $six . "';";
     $list_four = $dbh->query($sql_query_dest);
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["src"];
