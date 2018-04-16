@@ -76,7 +76,7 @@ body {
 #p04 {
 font-size:25px;
 
-padding: 30px;
+padding-left: 50px;
 }
 
 
@@ -156,8 +156,9 @@ perfSONAR Analytics Summarization Tool</h1>
   
 </table>
 
+<p id="p04">
   <input type="submit" value="Query">
-
+</p>
 
 </form>
 <button onclick="reset()">Reset</button>
