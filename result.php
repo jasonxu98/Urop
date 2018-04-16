@@ -75,7 +75,7 @@ Start time: <?php echo $_POST["start_time"]; ?>(epoch:<?php echo strtotime($_POS
 End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["end_time"]); ?>)<br><br>
 
 
-<h2> The summary</h2><br>
+
 <?php
     $host        = "t3pers13.physics.lsa.umich.edu";
     #$host        = "localhost";
@@ -90,7 +90,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $sql_query_stmt = "select src,dest,rtnum, cnt, hops from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
     $stmt = $dbh->query($sql_query_stmt);
 ?>
-
+<h2> The summary</h2><br>
 <table class="table table-striped table-bordered" style="width:600px;">
 <thead>
 <tr>
