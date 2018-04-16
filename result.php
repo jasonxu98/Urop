@@ -87,11 +87,10 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     if ($dbh) {
         echo "Connected to DB $dbname<br>";
     }
-    $sql_query_stmt = "select src,dest,rtnum, cnt from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
+    $sql_query_stmt = "select src,dest,rtnum, cnt, hops from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
     $stmt = $dbh->query($sql_query_stmt);
 ?>
 
-<h1>Count of routes</h1>
 <table class="table table-striped table-bordered" style="width:600px;">
 <thead>
 <tr>
@@ -99,6 +98,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 <th>Destination</th>
 <th>Route Number</th>
 <th>Count</th>
+<th>Hops</th>
 </tr>
 </thead>
 <tbody>
@@ -108,6 +108,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 <td><?php echo htmlspecialchars($row['dest']); ?></td>
 <td><?php echo htmlspecialchars($row['rtnum']); ?></td>
 <td><?php echo htmlspecialchars($row['cnt']); ?></td>
+<td><?php echo htmlspecialchars($row['hops']); ?></td>
 </tr>
 <?php endwhile; ?>
 </tbody>
