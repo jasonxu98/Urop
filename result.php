@@ -91,6 +91,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $stmt = $dbh->query($sql_query_stmt);
 ?>
 
+<h1>Count of routes</h1>
 <table class="table table-striped table-bordered" style="width:600px;">
 <thead>
 <tr>
