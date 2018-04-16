@@ -54,17 +54,8 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 
 
 <?php
-
-$host        = "t3pers13.physics.lsa.umich.edu";
-#$host        = "localhost";
-$port        = "5432";
-$dbname      = "jasonxu";
-$user = "jasonxu"; 
-$password = "xzk3136";
-
-try {
-  $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-  if ($dbh) {
+  $dbh2 = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
+  if ($dbh2) {
 	echo "Connected to DB $dbname<br>";
   }
 } catch ( PDOException $e) {
