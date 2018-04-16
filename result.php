@@ -48,7 +48,7 @@ Start time: <?php echo $_POST["start_time"]; ?>(epoch:<?php echo strtotime($_POS
 End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["end_time"]); ?>)<br><br>
 
 
-<h2> The output</h2><br>
+<h2> The summary</h2><br>
 
 
 
