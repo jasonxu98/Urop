@@ -114,7 +114,35 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 </tbody>
 </table>
 
+<?php
+    $start_time = substr_replace($start_time, " ", -6);
+    $end_time = substr_replace($end_time, " ", -6);
+    $sql_query_stmt2 = "select src,dest,hops, count(1) as count from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "' and timestamp<'" . $end_time . "' AND timestamp>='" . $start_time . "' group by src,dest,hops order by hops;";
+    $stmt2 = $dbh->query($sql_query_stmt2);
+    ?>
+<h2> The summary</h2><br>
+<table class="table table-striped table-bordered" style="width:600px;">
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Hops</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<?php while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) : ?>
+<tr>
+<td><?php echo htmlspecialchars($row['src']); ?></td>
+<td><?php echo htmlspecialchars($row['dest']); ?></td>
+<td><?php echo htmlspecialchars($row['hops']); ?></td>
+<td><?php echo htmlspecialchars($row['count']); ?></td>
+</tr>
+<?php endwhile; ?>
+</tbody>
+</table>
 
+    
 
 </body>
 </html>
