@@ -87,7 +87,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     if ($dbh) {
         echo "Connected to DB $dbname<br>";
     }
-    $sql_query_stmt = "select src,dest,rtnum, cnt from traceroute where src='" . $ ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
+    $sql_query_stmt = "select src,dest,rtnum, cnt from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
     $stmt = $dbh->query($sql_query_stmt);
 ?>
 
