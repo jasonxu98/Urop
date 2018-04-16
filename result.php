@@ -4,6 +4,33 @@
 <head>
 <style>
 
+table {
+margin: 8px;
+border: 2px solid black;
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+background: #666;
+color: #FFF;
+padding: 2px 6px;
+    border-collapse: separate;
+border: 2px solid black;
+}
+
+td {
+background: #EEF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85em;
+border: 1px solid #666;
+    text-align: center
+}
+
+tr:hover {
+    background-color:#ffffff;
+}
+
 </style>
 </head>
 
@@ -59,11 +86,32 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     if ($dbh) {
         echo "Connected to DB $dbname<br>";
-    } 
+    }
+    $sql_query_stmt = "select src,dest,rtnum, cnt from traceroute where src='" . $ ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
+    $stmt = $dbh->query($sql_query_stmt);
+?>
 
-    
-    
-?> 
+<table class="table table-striped table-bordered" style="width:600px;">
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Route Number</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+<tr>
+<td><?php echo htmlspecialchars($row['src']); ?></td>
+<td><?php echo htmlspecialchars($row['dest']); ?></td>
+<td><?php echo htmlspecialchars($row['rtnum']); ?></td>
+<td><?php echo htmlspecialchars($row['cnt']); ?></td>
+</tr>
+<?php endwhile; ?>
+</tbody>
+</table>
+
 
 </body>
 </html>
