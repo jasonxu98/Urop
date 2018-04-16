@@ -83,6 +83,9 @@ padding: 30px;
 
 form {
     font-size:25px;
+border: 1px solid ;
+padding: 30px;
+
 }
 
 img.a {
@@ -118,7 +121,6 @@ perfSONAR Analytics Summarization Tool</h1>
 
 <p id="p01">To use this toolkit, please select your source site, destination site and time period from the drop box below.<br>Please kindly note that latest data <b>might not</b> be up to date.</p>
 
-<p id="p04">
 <form action=result.php method="post">
 	<table style="width:100%">
   	<tr>
@@ -165,7 +167,7 @@ perfSONAR Analytics Summarization Tool</h1>
 </form>
 <button onclick="reset()">Reset</button>
 
-</p>
+
 
 
 <p id="demo">
