@@ -91,7 +91,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $sql_query_stmt = "select src,dest,rtnum, cnt, hops from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
     $stmt = $dbh->query($sql_query_stmt);
 ?>
-<h2 style="text-align:center;"> Traceroute Summary</h2><br>
+<h2 style="text-align:center;"> Traceroute Summary<br>In all data</h2><br>
 <table class="table table-striped table-bordered" style="width:600px;">
 <thead>
 <tr>
@@ -144,6 +144,31 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 <?php endwhile; ?>
 </tbody>
 </table>
+
+<?php
+    $sql_query_stmt2 = "select min(timestamp) as StartTime, max(timestamp) as EndTime, hops_grp as hops from (select timestamp, min(hops) over (order by timestamp) as hops_grp from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "') hopgrp group by hops order by StartTime;";
+    $stmt2 = $dbh->query($sql_query_stmt2);
+    ?>
+<h2 style="text-align:center;">Traceroute and corresponding time intervals</h2><br>
+<table class="table table-striped table-bordered" style="width:600px;">
+<thead>
+<tr>
+<th>Start time</th>
+<th>End time</th>
+<th>Hops</th>
+</tr>
+</thead>
+<tbody>
+<?php while($row = $stmt2->fetch(PDO::FETCH_ASSOC)) : ?>
+<tr>
+<td><?php echo htmlspecialchars($row['starttime']); ?></td>
+<td><?php echo htmlspecialchars($row['endtime']); ?></td>
+<td><?php echo htmlspecialchars($row['hops']); ?></td>
+</tr>
+<?php endwhile; ?>
+</tbody>
+</table>
+
 
     
 
