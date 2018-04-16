@@ -91,7 +91,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $sql_query_stmt = "select src,dest,rtnum, cnt, hops from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
     $stmt = $dbh->query($sql_query_stmt);
 ?>
-<h2 style="text-align:center;"> The summary</h2><br>
+<h2 style="text-align:center;"> Traceroute Summary</h2><br>
 <table class="table table-striped table-bordered" style="width:600px;">
 <thead>
 <tr>
@@ -121,7 +121,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $sql_query_stmt2 = "select src,dest,hops, count(1) as count from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "' and timestamp<'" . $end_time . "' AND timestamp>='" . $start_time . "' group by src,dest,hops order by hops;";
     $stmt2 = $dbh->query($sql_query_stmt2);
     ?>
-<h2 style="text-align:center;"> The summary</h2><br>
+<h2 style="text-align:center;">Traceroute Summary<br>From <?php echo $start_time; ?> to <?php echo $end_time; ?></h2><br>
 <table class="table table-striped table-bordered" style="width:600px;">
 <thead>
 <tr>
