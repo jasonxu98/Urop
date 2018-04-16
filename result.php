@@ -42,8 +42,8 @@
     
     ?>
     <h1> Your input </h1>
-Source: <?php echo $src; ?>  IP address:(<?php echo $ip1 ?>  ) <br>
-Destination: <?php echo $des; ?>  IP address:(<?php echo $ip2 ?>   )<br>
+Source: <?php echo $src; ?>  IP address:(<?php echo $ip1; ?>  ) <br>
+Destination: <?php echo $des; ?>  IP address:(<?php echo $ip2; ?>   )<br>
 Start time: <?php echo $_POST["start_time"]; ?>(epoch:<?php echo strtotime($_POST["start_time"]); ?>)<br>
 End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["end_time"]); ?>)<br><br>
 
