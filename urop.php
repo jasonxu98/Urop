@@ -76,7 +76,7 @@ body {
 #p04 {
 font-size:25px;
 
-padding-left: 30px;
+padding:10px 30px 15px;
 }
 
 
@@ -84,7 +84,7 @@ padding-left: 30px;
 form {
     font-size:25px;
 
-padding: 30px;
+padding:30px 30px 0px;
 
 }
 
