@@ -53,6 +53,7 @@ function populateZone() {
 
 <style>
 #button1 {
+background-color: #bbb;
 padding: .5em;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -71,6 +72,7 @@ box-shadow: 0px 0px 1px #777;
 }
 
 #button2 {
+background-color: #bbb;
 padding: .5em;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
