@@ -18,11 +18,11 @@
     
     $new_src = substr_replace($src, "", -1);
     $ip_type1 = substr($new_src, -4);
-    $new_src = substr_replace($src, "", -5);
+    $new_src = substr_replace($src, "", -6);
     
     $new_des = substr_replace($des, "", -1);
     $ip_type2 = substr($new_des, -4);
-    $new_des = substr_replace($des, "", -5);
+    $new_des = substr_replace($des, "", -6);
     include 'dtb.php';
     
     $sql_query_ip1="select " . $ip_type1 .  " as " . $ip_type1 . " from serverlookupbackup where domain = '" . $new_src . "';";
@@ -42,8 +42,8 @@
     
     ?>
     <h1> Your input </h1>
-Source: <?php echo $src; ?>  IP address:(<?php echo $new_src; ?>  ) <br>
-Destination: <?php echo $des; ?>  IP address:(<?php echo $new_des; ?>   )<br>
+Source: <?php echo $src; ?>  IP address:(<?php echo $ip1; ?>  ) <br>
+Destination: <?php echo $des; ?>  IP address:(<?php echo $ip2; ?>   )<br>
 Start time: <?php echo $_POST["start_time"]; ?>(epoch:<?php echo strtotime($_POST["start_time"]); ?>)<br>
 End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["end_time"]); ?>)<br><br>
 
