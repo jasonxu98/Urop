@@ -116,8 +116,10 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 </table>
 
 <?php
-    $start_time = substr_replace($start_time, " ", -6);
-    $end_time = substr_replace($end_time, " ", -6);
+    $connect1 = substr($start_time, -5);
+    $connect2 = substr($end_time, -5);
+    $start_time = substr_replace($start_time, " ", -6) . $connect1;
+    $end_time = substr_replace($end_time, " ", -6) . $connect2;
     $sql_query_stmt2 = "select src,dest,hops, count(1) as count from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "' and timestamp<'" . $end_time . "' AND timestamp>='" . $start_time . "' group by src,dest,hops order by hops;";
     $stmt2 = $dbh->query($sql_query_stmt2);
     ?>
