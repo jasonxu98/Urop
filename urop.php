@@ -63,8 +63,9 @@ text-decoration: none;
 border: none;
 }
 
-#button1 {
+#button1:hover {
 border: none;
+background: orange;
 box-shadow: 0px 0px 1px #777;
 }
 
@@ -79,8 +80,9 @@ text-decoration: none;
 border: none;
 }
 
-#button2 {
+#button2:hover {
 border: none;
+background: orange;
 box-shadow: 0px 0px 1px #777;
 }
 
