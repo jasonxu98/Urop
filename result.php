@@ -114,9 +114,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 </tbody>
 </table>
 
-<?php
-    $start_time =
-    $end_time = 
+
 
 </body>
 </html>
