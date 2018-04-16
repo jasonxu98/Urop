@@ -327,6 +327,10 @@ function default_time() {
                 var ip2 = response.slice(0,-19);
                 document.getElementById("start").defaultValue = ip2;
                 document.getElementById("end").defaultValue = ip1;
+                if (!response) {
+                    document.getElementById("start").defaultValue = "2018-01-01T00:00";
+                    document.getElementById("end").defaultValue = "2018-01-01T00:00";
+                }
             }
         }
         
