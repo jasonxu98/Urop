@@ -156,9 +156,8 @@ perfSONAR Analytics Summarization Tool</h1>
   
 </table>
 
-<p id="p04">
   <input type="submit" value="Query">
-</p>
+
 
 </form>
 <button onclick="reset()">Reset</button>
