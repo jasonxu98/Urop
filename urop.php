@@ -53,12 +53,10 @@ function populateZone() {
 
 <style>
 #button1 {
-background-color: #bbb;
 padding: .5em;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 6px;
-color: #fff;
 font-family: 'Oswald';
 font-size: 20px;
 text-decoration: none;
@@ -67,17 +65,14 @@ border: none;
 
 #button1 {
 border: none;
-background: orange;
 box-shadow: 0px 0px 1px #777;
 }
 
 #button2 {
-background-color: #bbb;
 padding: .5em;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 6px;
-color: #fff;
 font-family: 'Oswald';
 font-size: 20px;
 text-decoration: none;
@@ -86,7 +81,6 @@ border: none;
 
 #button2 {
 border: none;
-background: orange;
 box-shadow: 0px 0px 1px #777;
 }
 
