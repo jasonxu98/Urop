@@ -146,7 +146,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 </table>
 
 <?php
-    $sql_query_stmt2 = "select min(timestamp) as StartTime, max(timestamp) as EndTime, hops_grp as hops from (select timestamp, min(hops) over (order by timestamp) as hops_grp from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "') hopgrp group by hops order by StartTime;";
+    $sql_query_stmt2 = "select min(timestamp) as StartTime, max(timestamp) as EndTime, hops_grp as hops from (select timestamp, min(hops) over (order by timestamp) as hops_grp from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "' and host(dest)=regexp_replace(substring(hops,2,length(hops::text)-2), '.*,', '')) hopgrp group by hops order by StartTime;";
     $stmt2 = $dbh->query($sql_query_stmt2);
     ?>
 <h2 style="text-align:center;">Traceroute and corresponding time intervals</h2><br>
