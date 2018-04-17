@@ -53,14 +53,14 @@ tr:hover {
     $new_des = substr_replace($des, "", -6);
     include 'dtb.php';
     
-    $sql_query_ip1="select " . $ip_type1 .  " as " . $ip_type1 . " from serverlookupbackup where domain = '" . $new_src . "';";
+    $sql_query_ip1="select " . $ip_type1 .  " as " . $ip_type1 . " from serverlookup where domain = '" . $new_src . "';";
     $list_ip1 = $dbh->query($sql_query_ip1);
     
     while($row_list_ip1 = $list_ip1->fetch(PDO::FETCH_ASSOC)):
     $ip1 = $row_list_ip1[$ip_type1];
     endwhile;
     
-    $sql_query_ip2="select " . $ip_type2 .  " as " . $ip_type2 . " from serverlookupbackup where domain = '" . $new_des . "';";
+    $sql_query_ip2="select " . $ip_type2 .  " as " . $ip_type2 . " from serverlookup where domain = '" . $new_des . "';";
     $list_ip2 = $dbh->query($sql_query_ip2);
     
     while($row_list_ip2 = $list_ip2->fetch(PDO::FETCH_ASSOC)):

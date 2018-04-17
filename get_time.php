@@ -4,8 +4,8 @@
     $dest = $_POST["dest"];
     $ip2 = $_POST["ip2"];
     include 'dtb.php';
-    $sql_query_domain1="select " . $ip1 .  " as " . $ip1 . " from serverlookupbackup where domain = '" . $src . "';";
-    $sql_query_domain2="select " . $ip2 .  " as " . $ip2 . " from serverlookupbackup where domain = '" . $dest . "';";
+    $sql_query_domain1="select " . $ip1 .  " as " . $ip1 . " from serverlookup where domain = '" . $src . "';";
+    $sql_query_domain2="select " . $ip2 .  " as " . $ip2 . " from serverlookup where domain = '" . $dest . "';";
     $list1 = $dbh->query($sql_query_domain1);
     $list2 = $dbh->query($sql_query_domain2);
     
@@ -18,7 +18,7 @@
     endwhile;
     
     
-    $sql_query_time = "select src, dest, to_char(min(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MinTime, to_char(max(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MaxTime from rawtracedatabackup where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
+    $sql_query_time = "select src, dest, to_char(min(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MinTime, to_char(max(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MaxTime from rawtracedata where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
     $list3 = $dbh->query($sql_query_time);
     if ($list3 === false) {
         echo notfound;
