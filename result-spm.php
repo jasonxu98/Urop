@@ -2,11 +2,11 @@
 <?php
 
 echo "Hello<br>";
-$host        = "t3pers13.physics.lsa.umich.edu";
+$host        = "psdb.aglt2.org";
 #$host        = "localhost";
 $port        = "5432";
-$dbname      = "jasonxu";
-$user = "jasonxu"; 
+$dbname      = "psdb_urop";
+$user = "postgres";
 $password = "xzk3136";
 
 try {
