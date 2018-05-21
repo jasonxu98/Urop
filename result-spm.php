@@ -1,6 +1,3 @@
-<script>
-var x = "SELECT * FROM weather";
-
 
 <?php
 
@@ -11,7 +8,6 @@ $port        = "5432";
 $dbname      = "jasonxu";
 $user = "jasonxu"; 
 $password = "xzk3136";
-    </script>
 
 try {
   $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
@@ -25,7 +21,7 @@ try {
 # Create query of table
     
     
-    $sql_query= "<script> document.write(x) </script>";
+    $sql_query= "SELECT * FROM weather";
 try {
   $stmt = $dbh->query($sql_query);
   if ($stmt === false){
