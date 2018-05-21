@@ -78,11 +78,11 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 
 
 <?php
-    $host        = "t3pers13.physics.lsa.umich.edu";
+    $host        = "psdb.aglt2.org";
     #$host        = "localhost";
     $port        = "5432";
-    $dbname      = "zerses_test";
-    $user = "jasonxu";
+    $dbname      = "psdb_urop";
+    $user = "postgres";
     $password = "xzk3136";
     $dbh = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     if ($dbh) {

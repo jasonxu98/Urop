@@ -8,11 +8,11 @@
 function populateZone() {
     var zones ='';
     <?php
-    $host        = "t3pers13.physics.lsa.umich.edu";
+    $host        = "psdb.aglt2.org";
     #$host        = "localhost";
     $port        = "5432";
-    $dbname      = "zerses_test";
-    $user = "jasonxu";
+    $dbname      = "psdb_urop";
+    $user = "postgres";
     $password = "xzk3136";
     $dbh1 = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     $sql_query_one="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL";
@@ -260,7 +260,7 @@ function limitDes(str) {
         {// code for IE6, IE5
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/des_get.php", true);
+        xhttp.open("POST", "http://psdb.aglt2.org/Urop/des_get.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.onreadystatechange=function()
         {
@@ -302,7 +302,7 @@ function limitsrc(str) {
         {// code for IE6, IE5
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/src_get.php", true);
+        xhttp.open("POST", "http://psdb.aglt2.org/Urop/src_get.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.onreadystatechange=function()
         {
@@ -360,7 +360,7 @@ function default_time() {
         {// code for IE6, IE5
             xhttp=new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhttp.open("POST", "http://t3pers13.physics.lsa.umich.edu/Urop/get_time.php", true);
+        xhttp.open("POST", "http://psdb.aglt2.org/Urop/get_time.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.onreadystatechange=function()
         {
