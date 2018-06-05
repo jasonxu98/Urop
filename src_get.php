@@ -10,6 +10,13 @@
     endwhile;
     
     $sql_query_dest = "select DISTINCT src as src from traceroute where dest = '" . $six . "';";
+  
+    
+    if(count($sql_query_dest) == 0) {
+        echo "<option value = \"No sources found for this given destination\"></option>";
+    }
+  
+    
     $list_four = $dbh->query($sql_query_dest);
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["src"];
