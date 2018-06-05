@@ -15,9 +15,9 @@
   
     
     $list_four = $dbh->query($sql_query_dest);
-    if(pg_num_rows($list_four) == 0) {
-        echo "<option value = \"No sources found for this given destination\"></option>";
-    }
+    #if(pg_num_rows($list_four) == 0) {
+    #   echo "<option value = \"No sources found for this given destination\"></option>";
+    #}
     
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["src"];
