@@ -12,12 +12,12 @@
     $sql_query_dest = "select DISTINCT dest as dest from traceroutebackup where src = '" . $six . "';";
     
     
-    if(count($sql_query_dest) == 0) {
-        echo "<option value = \"No destinations found for this given source\"></option>";
-    }
     
     
     $list_four = $dbh->query($sql_query_dest);
+    if(count($list_four) == 0) {
+        echo "<option value = \"No destinations found for this given source\"></option>";
+    }
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["dest"];
     
