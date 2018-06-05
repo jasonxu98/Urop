@@ -18,6 +18,7 @@
     if(count($list_four) == 0) {
         echo "<option value = \"No sources found for this given destination\"></option>";
     }
+    echo "<option value = \"No sources found for this given destination\"></option>";
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["src"];
     
