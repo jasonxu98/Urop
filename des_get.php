@@ -15,7 +15,7 @@
     
     
     $list_four = $dbh->query($sql_query_dest);
-    if(pg_num_rows($list_four) == 0) {
+    if(pg_num_rows($list_four) != 0) {
        echo "<option value = \"No destinations found for this given source\"></option>";
     }
 
