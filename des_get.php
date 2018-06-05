@@ -15,10 +15,12 @@
     
     
     $list_four = $dbh->query($sql_query_dest);
-    if(pg_num_rows($list_four) != 0) {
-       echo "<option value = \"No destinations found for this given source\"></option>";
-    }
-
+    #if(pg_num_rows($list_four) == 0) {
+    #   echo "<option value = \"No destinations found for this given source\"></option>";
+    #}
+    
+    echo "<option value = \"" . pg_num_rows($list_four) . "\"></option>";
+    
     while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
         $dest = $row_list_dest["dest"];
     
