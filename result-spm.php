@@ -40,7 +40,7 @@ try {
    ?>
 
 
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Departments</title>
