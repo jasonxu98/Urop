@@ -26,7 +26,7 @@
         }
     endwhile;
     
-    echo "IPV6 test <br><br>"
+    echo "IPV6 test <br><br>";
     while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
         $src_two = $row_list_two["domain"];
         $sql_query_domain_two = "select ipv6 as ipv6 from serverlookupbackup where domain = '" . $src_two . "';";
