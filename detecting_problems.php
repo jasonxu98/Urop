@@ -18,6 +18,9 @@
         while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
             $six = $row_list_domain[$ip];
         endwhile;
+        $sql_query_dest = "select DISTINCT dest as dest from traceroutebackup where src = '" . $six . "';";
+        $list_four = $dbh1->query($sql_query_dest);
+    
         
     endwhile;
     
