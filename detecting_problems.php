@@ -17,13 +17,14 @@
         $list_three = $dbh1->query($sql_query_domain);
         while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
             $six = $row_list_domain[$ip];
+            echo $six . "<br>";
         endwhile;
         $sql_query_dest = "select DISTINCT dest as dest from traceroutebackup where src = '" . $six . "';";
         $list_four = $dbh1->query($sql_query_dest);
     
-        while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
-            echo "No destination found for : " . $src . "<br>";
-        endwhile;
+    #while($row_list_dest = $list_four->fetch(PDO::FETCH_ASSOC)):
+    #       echo "No destination found for : " . $src . "<br>";
+    #endwhile;
     endwhile;
     
 ?>
