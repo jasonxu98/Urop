@@ -1,4 +1,5 @@
 <?php
+    echo "IPV4 test <br><br>"
     $host        = "psdb.aglt2.org";
     #$host        = "localhost";
     $port        = "5432";
@@ -23,6 +24,23 @@
         if(!$list_four->fetch(PDO::FETCH_ASSOC)) {
             echo "No destination found for : " . $src . "<br>";
         }
+    endwhile;
+    
+    echo "IPV6 test <br><br>"
+    $list = $dbh1->query($sql_query_one) or die('error');
+    $list_two = $dbh1->query($sql_query_two) or die('error');
+    while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
+    $src = $row_list["domain"];
+    $sql_query_domain = "select ipv6 as ipv6 from serverlookupbackup where domain = '" . $src . "';";
+    $list_three = $dbh1->query($sql_query_domain);
+    while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
+    $six = $row_list_domain['ipv6'];
+    endwhile;
+    $sql_query_dest = "select DISTINCT dest as dest from traceroutebackup where src = '" . $six . "';";
+    $list_four = $dbh1->query($sql_query_dest);
+    if(!$list_four->fetch(PDO::FETCH_ASSOC)) {
+        echo "No destination found for : " . $src . "<br>";
+    }
     endwhile;
     
 ?>
