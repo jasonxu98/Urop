@@ -12,7 +12,7 @@
     $list = $dbh1->query($sql_query_one) or die('error');
     $list_two = $dbh1->query($sql_query_two) or die('error');
     while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
-        $src = $row_list;
+        $src = $row_list["domain"];
         $sql_query_domain = "select ipv4 as ipv4 from serverlookupbackup where domain = '" . $src . "';";
         $list_three = $dbh1->query($sql_query_domain);
         if(!($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC))) {
