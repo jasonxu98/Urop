@@ -16,7 +16,7 @@
         $sql_query_domain = "select ipv4 as ipv4 from serverlookupbackup where domain = '" . $src . "';";
         $list_three = $dbh1->query($sql_query_domain);
         while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
-            $six = $row_list_domain[$ip];
+            $six = $row_list_domain['ipv4'];
             echo $six . "<br>";
         endwhile;
         $sql_query_dest = "select DISTINCT dest as dest from traceroutebackup where src = '" . $six . "';";
