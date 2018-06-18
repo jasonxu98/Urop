@@ -8,8 +8,9 @@
     $password = "xzk3136";
     $dbh1 = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     
-    $sql_query_one="select domain as domain from serverlookup where ipv4 IS NOT NULL and bandwidth IS TRUE;";
-    $sql_query_two="select domain as domain from serverlookup where ipv6 IS NOT NULL and bandwidth IS TRUE;";    $list = $dbh1->query($sql_query_one) or die('error');
+    $sql_query_one="select domain as domain from serverlookup where ipv4 IS NOT NULL";
+    $sql_query_two="select domain as domain from serverlookup where ipv6 IS NOT NULL";
+    $list = $dbh1->query($sql_query_one) or die('error');
     $list_two = $dbh1->query($sql_query_two) or die('error');
     while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
         $src = $row_list["domain"];
