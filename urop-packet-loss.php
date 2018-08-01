@@ -157,7 +157,7 @@ perfSONAR Analytics Summarization Tool</h1>
 
 
 
-<p id="p01">To use this toolkit, please select your source site, destination site and time period from the drop box below.<br>Please kindly note that latest data <b>might not</b> be up to date.<br>This page only contains traceroute information, if you want packet loss information.</p>
+<p id="p01">To use this toolkit, please select your source site, destination site and time period from the drop box below.<br>Please kindly note that latest data <b>might not</b> be up to date.</p>
 
 <form action=result.php method="post">
 	<table style="width:100%">
