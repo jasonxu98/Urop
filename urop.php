@@ -328,8 +328,8 @@ function limitsrc(str) {
 function reset() {
     document.getElementById("box1").value = "";
     document.getElementById("box2").value = "";
-    document.getElementById("start").defaultValue = "2017-12-30T00:00";
-    document.getElementById("end").defaultValue = "2018-01-01T00:00";
+    document.getElementById("start").defaultValue = "0000-00-00T00:00";
+    document.getElementById("end").defaultValue = "0000-00-00T00:00";
     populateZone();
 }
 
