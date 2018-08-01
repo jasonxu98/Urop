@@ -16,8 +16,8 @@ function populateZone() {
     $user = "postgres";
     $password = "xzk3136";
     $dbh1 = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-    $sql_query_one="select src as src from packetsrc;";
-    $sql_query_two="select dest as dest from packetdest;";
+    $sql_query_one="select src as domain from packetsrc;";
+    $sql_query_two="select dest as domain from packetdest;";
     $list = $dbh1->query($sql_query_one) or die('error');
     $list_two = $dbh1->query($sql_query_two) or die('error');
     while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
