@@ -160,7 +160,7 @@ perfSONAR Analytics Summarization Tool</h1>
 
 <p id="p01">This page only contains packet loss information.If you want traceroute information,<a href="http://psdb.aglt2.org/Urop/urop.php">click here</a>.</p>
 
-<form action=result.php method="post">
+<form action=result-packet.php method="post">
 	<table style="width:100%">
   	<tr>
     <th>Source</th>
