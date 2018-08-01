@@ -6,7 +6,8 @@
 <script type="text/javascript">
 
 function populateZone() {
-    var zones ='';
+    var zonessrc ='';
+    var zonesdest ='';
     <?php
     $host        = "psdb.aglt2.org";
     #$host        = "localhost";
@@ -15,16 +16,16 @@ function populateZone() {
     $user = "postgres";
     $password = "xzk3136";
     $dbh1 = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-    $sql_query_one="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL and bandwidth IS TRUE;";
-    $sql_query_two="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 IS NOT NULL and bandwidth IS TRUE;";
+    $sql_query_one="select src as src from packetsrc;";
+    $sql_query_two="select dest as dest from packetdest;";
     $list = $dbh1->query($sql_query_one) or die('error');
     $list_two = $dbh1->query($sql_query_two) or die('error');
     while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
         ?>
         
-    zones += "<option value=\"";
-    zones += "<?php echo $row_list["domain"]; ?>";
-    zones += "\"></option>";
+    zonessrc += "<option value=\"";
+    zonessrc += "<?php echo $row_list["domain"]; ?>";
+    zonessrc += "\"></option>";
     
     <?php
     endwhile;
@@ -33,16 +34,16 @@ function populateZone() {
     <?php
     while($row_list_two = $list_two->fetch(PDO::FETCH_ASSOC)):
         ?>
-    zones += "<option value=\"";
-    zones += "<?php echo $row_list_two["domain"]; ?>";
-    zones += "\"></option>";
+    zonesdest += "<option value=\"";
+    zonesdest += "<?php echo $row_list_two["domain"]; ?>";
+    zonesdest += "\"></option>";
     <?php
     endwhile;
     pg_close($dbh1);
     ?>
     
-    document.getElementById("browsers").innerHTML = zones;
-    document.getElementById("browser").innerHTML = zones;
+    document.getElementById("browsers").innerHTML = zonessrc;
+    document.getElementById("browser").innerHTML = zonesdest;
 
 }
 
@@ -157,7 +158,7 @@ perfSONAR Analytics Summarization Tool</h1>
 
 
 
-<p id="p01">This page only contains packet loss information, if you want traceroute information,<a href="http://psdb.aglt2.org/Urop/urop.php">click here</a>.</p>
+<p id="p01">This page only contains packet loss information.If you want traceroute information,<a href="http://psdb.aglt2.org/Urop/urop.php">click here</a>.</p>
 
 <form action=result.php method="post">
 	<table style="width:100%">
