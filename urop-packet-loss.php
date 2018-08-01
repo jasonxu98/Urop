@@ -43,7 +43,7 @@ function populateZone() {
     ?>
     
     document.getElementById("browsers").innerHTML = zonessrc;
-    //document.getElementById("browser").innerHTML = zonesdest;
+    document.getElementById("browser").innerHTML = zonesdest;
 
 }
 

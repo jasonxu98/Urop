@@ -183,11 +183,11 @@ perfSONAR Analytics Summarization Tool</h1>
     </td>
     <td>
     
-     	<input id="start" name="start_time" type="datetime-local" min="2018-01-01T01:00">
+     	<input id="start" name="start_time" type="datetime-local" min="2017-12-01T01:00">
      
     </td>
     <th>
-    <input id="end" name="end_time" type="datetime-local" min="2018-01-01T01:00">
+    <input id="end" name="end_time" type="datetime-local" min="2017-12-01T01:00">
     </th>
 	</tr>
   
@@ -373,7 +373,7 @@ function default_time() {
                 document.getElementById("start").defaultValue = ip2;
                 document.getElementById("end").defaultValue = ip1;
                 if (!response) {
-                    document.getElementById("start").defaultValue = "2018-01-01T00:00";
+                    document.getElementById("start").defaultValue = "2017-12-30T00:00";
                     document.getElementById("end").defaultValue = "2018-01-01T00:00";
                 }
             }
