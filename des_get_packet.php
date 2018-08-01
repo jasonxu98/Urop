@@ -5,7 +5,7 @@
     $list_three = $dbh->query($sql_query_domain);
     
     while($row_list_domain = $list_three->fetch(PDO::FETCH_ASSOC)):
-    $six = $row_list_domain[$ip];
+    $six = $row_list_domain[$dest];
     endwhile;
     
    
