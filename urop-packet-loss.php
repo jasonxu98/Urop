@@ -43,7 +43,7 @@ function populateZone() {
     ?>
     
     document.getElementById("browsers").innerHTML = zonessrc;
-    document.getElementById("browser").innerHTML = zonesdest;
+    //document.getElementById("browser").innerHTML = zonesdest;
 
 }
 
@@ -240,18 +240,11 @@ document.getElementById("demo").innerHTML = Date();
 
 
 function limitDes(str) {
-        var str1 = '';
-        var str2 = '';
-        var ip_address = '';
-        var ip_address_ = '';
-        str = str.slice(0,-1);
-        var lastFour = str.substr(str.length - 4);
-        var check = '';
-        str = str.slice(0,-5);
+        
     
-    if (lastFour == 'ipv4' || lastFour == 'ipv6' ) {
+    if (str != '') {
         var xhttp;
-        var parameter = "src=" + str +"&ip=" + lastFour;
+        var parameter = "src=" + str;
         
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
