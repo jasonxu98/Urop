@@ -21,7 +21,7 @@
 
     #$sql_query_time = "select src, dest, to_char(min(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MinTime, to_char(max(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MaxTime from 
     #rawtracedatabackup where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
-    $sql_query_time = "select  min(min_ts), max(max_ts) from traceroute where src='" . $ipaddress1 . "' and dest='" . $ipaddress2 . "' group by src, dest;";
+    $sql_query_time = "select min(min_ts), max(max_ts) from traceroute where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
 
     $list3 = $dbh->query($sql_query_time);
     if ($list3 === false) {
