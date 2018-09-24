@@ -31,13 +31,13 @@
 
     #$min = $row3["mintime"];
     #$max = $row3["maxtime"];
-    $min = $row3["min"];
-    $max = $row3["max"];
+    $mintime = $row3["min"];
+    $maxtime = $row3["max"];
 
 
     endwhile;
-        echo $min;
-        echo $max;
+        echo $mintime;
+        echo $maxtime;
     }
 
 
