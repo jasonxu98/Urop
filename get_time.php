@@ -17,7 +17,8 @@
     $ipaddress2 = $row2[$ip2];
     endwhile;
     
-    
+    #129.107.255.30                  | 194.190.165.191
+    #select min(min_ts), max(max_ts) from traceroute where src = '129.107.255.30' and dest = '194.190.165.191' group by src, dest;
 
     #$sql_query_time = "select src, dest, to_char(min(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MinTime, to_char(max(timestamp), 'YYYY-MM-DD\"T\"HH24:MI:SS') as MaxTime from 
     #rawtracedatabackup where src = '" . $ipaddress1 . "' and dest = '" . $ipaddress2 . "' group by src, dest;";
