@@ -15,8 +15,8 @@ function populateZone() {
     $user = "postgres";
     $password = "xzk3136";
     $dbh1 = new PDO( "pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
-    $sql_query_one="select domain||'(ipv4)' as domain from serverlookupbackup where ipv4 IS NOT NULL and bandwidth IS TRUE;";
-    $sql_query_two="select domain||'(ipv6)' as domain from serverlookupbackup where ipv6 IS NOT NULL and bandwidth IS TRUE;";
+    $sql_query_one="select domain||'(ipv4)' as domain from serverlookup where ipv4 IS NOT NULL and bandwidth IS TRUE;";
+    $sql_query_two="select domain||'(ipv6)' as domain from serverlookup where ipv6 IS NOT NULL and bandwidth IS TRUE;";
     $list = $dbh1->query($sql_query_one) or die('error');
     $list_two = $dbh1->query($sql_query_two) or die('error');
     while($row_list = $list->fetch(PDO::FETCH_ASSOC)):
@@ -328,8 +328,8 @@ function limitsrc(str) {
 function reset() {
     document.getElementById("box1").value = "";
     document.getElementById("box2").value = "";
-    document.getElementById("start").defaultValue = "0000-00-00T00:00";
-    document.getElementById("end").defaultValue = "0000-00-00T00:00";
+    document.getElementById("start").defaultValue = "2017-12-30T00:00";
+    document.getElementById("end").defaultValue = "2018-01-01T00:00";
     populateZone();
 }
 
@@ -373,8 +373,8 @@ function default_time() {
                 document.getElementById("start").defaultValue = ip2;
                 document.getElementById("end").defaultValue = ip1;
                 if (!response) {
-                    document.getElementById("start").defaultValue = "2017-12-30T00:00";
-                    document.getElementById("end").defaultValue = "2018-01-01T00:00";
+                    document.getElementById("start").defaultValue = "0000-00-00T00:00";
+                    document.getElementById("end").defaultValue = "0000-00-00T00:00";
                 }
             }
         }

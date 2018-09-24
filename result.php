@@ -53,14 +53,14 @@ tr:hover {
     $new_des = substr_replace($des, "", -6);
     include 'dtb.php';
     
-    $sql_query_ip1="select " . $ip_type1 .  " as " . $ip_type1 . " from serverlookupbackup where domain = '" . $new_src . "';";
+    $sql_query_ip1="select " . $ip_type1 .  " as " . $ip_type1 . " from serverlookup where domain = '" . $new_src . "';";
     $list_ip1 = $dbh->query($sql_query_ip1);
     
     while($row_list_ip1 = $list_ip1->fetch(PDO::FETCH_ASSOC)):
     $ip1 = $row_list_ip1[$ip_type1];
     endwhile;
     
-    $sql_query_ip2="select " . $ip_type2 .  " as " . $ip_type2 . " from serverlookupbackup where domain = '" . $new_des . "';";
+    $sql_query_ip2="select " . $ip_type2 .  " as " . $ip_type2 . " from serverlookup where domain = '" . $new_des . "';";
     $list_ip2 = $dbh->query($sql_query_ip2);
     
     while($row_list_ip2 = $list_ip2->fetch(PDO::FETCH_ASSOC)):
@@ -88,7 +88,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     if ($dbh) {
         echo "Connected to DB $dbname<br>";
     }
-    $sql_query_stmt = "select src,dest,rtnum, cnt, hops from traceroutebackup where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
+    $sql_query_stmt = "select src,dest,rtnum, cnt, hops from traceroute where src='" . $ip1 . "' and dest='" . $ip2 . "' order by rtnum;";
     $stmt = $dbh->query($sql_query_stmt);
 ?>
 <h2 style="text-align:center;"> Traceroute Summary<br>In all data</h2><br>
@@ -120,7 +120,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
     $connect2 = substr($end_time, -5);
     $start_time = substr_replace($start_time, " ", -6) . $connect1;
     $end_time = substr_replace($end_time, " ", -6) . $connect2;
-    $sql_query_stmt2 = "select src,dest,hops, count(1) as count from rawtracedatabackup where src='" . $ip1 . "' and dest='" . $ip2 . "' and timestamp<'" . $end_time . "' AND timestamp>='" . $start_time . "' group by src,dest,hops order by hops;";
+    $sql_query_stmt2 = "select src,dest,hops, count(1) as count from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "' and timestamp<'" . $end_time . "' AND timestamp>='" . $start_time . "' group by src,dest,hops order by hops;";
     $stmt2 = $dbh->query($sql_query_stmt2);
     ?>
 <h2 style="text-align:center;">Traceroute Summary<br>From <?php echo $start_time; ?> to <?php echo $end_time; ?></h2><br>
@@ -146,7 +146,7 @@ End time: <?php echo $_POST["end_time"]; ?>(epoch:<?php echo strtotime($_POST["e
 </table>
 
 <?php
-    $sql_query_stmt2 = "select min(timestamp) as StartTime, max(timestamp) as EndTime, hops_grp as hops from (select timestamp, min(hops) over (order by timestamp) as hops_grp from rawtracedatabackup where src='" . $ip1 . "' and dest='" . $ip2 . "' and host(dest)=regexp_replace(substring(hops,2,length(hops::text)-2), '.*,', '')) hopgrp group by hops order by StartTime;";
+    $sql_query_stmt2 = "select min(timestamp) as StartTime, max(timestamp) as EndTime, hops_grp as hops from (select timestamp, min(hops) over (order by timestamp) as hops_grp from rawtracedata where src='" . $ip1 . "' and dest='" . $ip2 . "' and host(dest)=regexp_replace(substring(hops,2,length(hops::text)-2), '.*,', '')) hopgrp group by hops order by StartTime;";
     $stmt2 = $dbh->query($sql_query_stmt2);
     ?>
 <h2 style="text-align:center;">Traceroute and corresponding time intervals</h2><br>
